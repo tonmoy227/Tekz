@@ -1,0 +1,13 @@
+.tz-header-section {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	position: absolute;
+	&:is(.header_style_one) {
+		.tz-header-top {
+			color: #fff;
+			background-color: var(--tz-prime-c);
+		}
+	}
+}
