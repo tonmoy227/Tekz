@@ -4,10 +4,114 @@
 	width: 100%;
 	z-index: 10;
 	position: absolute;
+	.navbar-nav {
+		flex-direction: row;
+	}
 	&:is(.header_style_one) {
 		.tz-header-top {
 			color: #fff;
+			padding: 8px 0px;
 			background-color: var(--tz-prime-c);
+			.tz-top-cta {
+				a {
+					font-weight: 500;
+					margin-right: 30px;
+					i {
+						margin-right: 6px;
+					}
+				}
+			}
+			.tz-top-social {
+				span {
+					font-size: 16px;
+					font-weight: 500;
+				}
+				a {
+					margin-left: 20px;
+					&:hover {
+						transform: scale(1.2);
+					}
+					&:first-child {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+		.tz-main-navigation-area {
+			padding: 30px;
+			background-color: #fff;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border: 1px solid var(--tz-prime-c);
+			border-top: none;
+			box-shadow: 0px 8px 30px 0px #1F153F1A;
+			box-shadow: 0px 4px 0px 0px var(--tz-prime-c);
+
+		}
+		.main-navigation-cta {
+			.main-navigation {
+				li {
+					margin: 0px 26px;
+					a {
+						font-size: 18px;
+						font-weight: 600;
+						display: inline;
+						color: var(--tz-title-color);
+					}
+				}
+			}
+		}
+		.header-action {
+			gap: 40px;
+			.header-cta {
+				gap: 14px;
+				.item-icon {
+					width: 50px;
+					height: 50px;
+					border-radius: 100%;
+					background-color: #F1ECFF;
+					i {
+						color: var(--tz-prime-c);
+					}
+				}
+				.item-text {
+					a,span {
+						display: block;
+						color: var(--tz-title-color);
+					}
+					span {
+						font-size: 14px;
+					}
+					a {
+						font-size: 16px;
+						font-weight: 700;
+						color: var(--tz-title-color);
+					}
+				}
+			}
+		}
+		.header-cta-btn {
+			a {
+				gap: 12px;
+				color: #fff;
+				display: flex;
+				font-size: 16px;
+				font-weight: 700;
+				border-radius: 100px;
+				align-items: center;
+				padding: 12px 23px 12px 25px;
+				background-color: var(--tz-prime-c);
+				i {
+					width: 26px;
+					height: 26px;
+					display: flex;
+					font-size: 14px;
+					align-items: center;
+					border-radius: 100%;
+					justify-content: center;
+					border: 1px solid #FFFFFF;
+				}
+			}
 		}
 	}
 }
