@@ -9,10 +9,6 @@ Last change:    00/00/00
 ;(function($) {
 
 	"use strict";
-	jQuery(window).on('load', function(){
-		jQuery('#preloader').fadeOut('slow',function(){jQuery(this).remove();});
-		
-	});
 	gsap.config({
 		nullTargetWarn: false,
 	});
@@ -103,6 +99,75 @@ Last change:    00/00/00
 		);
 		wow.init();
 	};
+	// windows-loaded-before-functions
+	document.addEventListener("DOMContentLoaded", function () {
+		window.addEventListener('load', function(){
+			let preloader = document.querySelector("#preloader");
+			if (preloader) {
+				preloader.classList.add("preloaded");
+				setTimeout(function () {
+					preloader.remove();
+				}, 1000 ) ;
 
-	
+			}
+			setTimeout(function() {
+				if($(".tz-hero-slider-area").length) {
+					var AGTh3 = new Swiper(".tz-hero-slider-area", {
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						// autoplay: {
+						// 	delay: 4000,
+						// },
+						navigation: {
+							prevEl: ".tz-hs-prev",
+							nextEl: ".tz-hs-next",
+						},
+						pagination: {
+							el: ".tz-hs-pagi",
+							clickable: true,
+							renderBullet: function (index, className) {
+								return '<span class="' + className + '">' + (index + 1) + "</span>";
+							},
+
+						},
+					});
+				};
+			}, 700);
+		})		
+	});
+// Circle Animation
+	if ($('.tz-circle-anim').length > 0 ) {
+		const path = document.getElementById('line_path');
+		const plane = document.getElementById('paper-plane');
+		const pathLength = path.getTotalLength();
+		let progress = 0.5; 
+		let speed = 0.0012; 
+		function animatePlane() {
+			const point = path.getPointAtLength(progress * pathLength);
+			plane.setAttribute('transform', `translate(${point.x}, ${point.y})`);
+			const tangent = path.getPointAtLength((progress + 0.01) * pathLength);
+			const angle = Math.atan2(tangent.y - point.y, tangent.x - point.x);
+			plane.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle * 180 / Math.PI})`);
+			progress += speed;
+			if (progress > 1) {
+				progress = 0;
+			}
+			requestAnimationFrame(animatePlane);
+		}
+		animatePlane();
+	};
+// Marquee Active
+	$('.marquee-left').marquee({
+		gap: 0,
+		speed: 100,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
 })(jQuery);
