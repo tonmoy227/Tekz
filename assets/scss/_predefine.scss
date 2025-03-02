@@ -242,6 +242,20 @@ a {
 	.sec_title {
 		font-size: 44px;
 		font-weight: 700;
+		line-height: 1.223;
+	}
+	p {
+		padding-top: 15px;
+	}
+}
+.tz-btn-1 {
+	a {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 15px 30px;
+		border-radius: 100px;
+		background-color: var(--tz-prime-c);
 	}
 }
 // txa-common-css-start
