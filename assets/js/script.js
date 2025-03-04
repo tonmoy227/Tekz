@@ -170,4 +170,28 @@ Last change:    00/00/00
 		pauseOnHover: true,
 		startVisible:true,
 	});
+	$('.marquee-right').marquee({
+		gap: 0,
+		speed: 100,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+// Testimonial Slider
+	if($(".tz-testi-slide").length) {
+		var testSlider = new Swiper(".tz-testi-slide", {
+			loop: true,
+			speed: 1000,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+			navigation: {
+				nextEl: ".tz-tst-next",
+				prevEl: ".tz-tst-prev",
+			},
+		});
+	};
 })(jQuery);
