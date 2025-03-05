@@ -99,6 +99,15 @@ Last change:    00/00/00
 		);
 		wow.init();
 	};
+	if($('.tz-split-1').length) {
+		var txtSplit = $('.tz-split-1');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "words",
+				wordsClass: "split-line"
+			});
+		});
+	}
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){

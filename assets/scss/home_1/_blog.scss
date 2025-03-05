@@ -1,12 +1,16 @@
 .tz-blog-sec {
+	overflow: hidden;
 	.tz-section-title {
 		margin: 0 auto;
 		max-width: 570px;
 	}
 }
 .tz-blog-item {
+	margin: 0 auto;
+	max-width: 410px;
 	overflow: hidden;
 	border-radius: 15px;
+	margin-bottom: 30px;
 	background-color: #F6F6F6;
 	.item-text {
 		padding: 35px 30px;

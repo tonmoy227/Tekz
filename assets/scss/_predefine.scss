@@ -243,6 +243,12 @@ a {
 		font-size: 44px;
 		font-weight: 700;
 		line-height: 1.223;
+		@media #{$md,$sm,$xs} {
+			font-size: 35px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
 	}
 	p {
 		padding-top: 15px;

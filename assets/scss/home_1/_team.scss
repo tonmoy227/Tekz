@@ -1,10 +1,14 @@
 .tz-team-sec {
+	overflow: hidden;
 	.tz-section-title {
 		margin: 0 auto;
 		max-width: 570px;
 	}
 }
 .tz-team-item {
+	margin: 0 auto;
+	max-width: 410px;
+	margin-bottom: 30px;
 	.item-img {
 		overflow: hidden;
 		border-radius: 15px;
@@ -29,10 +33,54 @@
 			border-bottom-right-radius: 15px;
 			border-bottom-left-radius: 15px;
 			box-shadow: 0px 10px 50px 0px rgba(23, 11, 61, 0.05);
+			@media #{$xs} {
+				padding: 23px 15px;
+			}
 			h3 {
 				font-size: 24px;
 				font-weight: 700;
 				padding-bottom: 5px;
+				white-space: nowrap;
+
+			}
+		}
+	}
+	.item-social-ic {
+		left: 0;
+		bottom: 106px;
+		position: absolute;
+		a {
+			opacity: 0;
+			color: #fff;
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			visibility: hidden;
+			justify-content: center;
+			border-bottom: 1px solid #fff;
+			background-color: var(--tz-prime-c);
+			transform: translateY(10px);
+		}
+	}
+	&:hover {
+		.item-social-ic {
+			a {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0px);
+				&:nth-child(1) {
+					transition-delay: 400ms;
+				}
+				&:nth-child(2) {
+					transition-delay: 300ms;
+				}
+				&:nth-child(3) {
+					transition-delay: 200ms;
+				}
+				&:nth-child(4) {
+					transition-delay: 100ms;
+				}
 			}
 		}
 	}

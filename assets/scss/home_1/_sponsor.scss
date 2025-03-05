@@ -1,4 +1,5 @@
 .tz-sponsor-content {
+	overflow: hidden;
 	display: flow-root;
 }
 .tz-sponsor-item {
@@ -9,5 +10,9 @@
 	.item-img {
 		width: 260px;
 		height: 140px;
+		@media #{$xs} {
+			width: 220px;
+			height: 100px;
+		}
 	}
 }
