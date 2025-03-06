@@ -136,9 +136,9 @@ Last change:    00/00/00
 						fadeEffect: {
 							crossFade: true
 						},
-						// autoplay: {
-						// 	delay: 4000,
-						// },
+						autoplay: {
+							delay: 4000,
+						},
 						navigation: {
 							prevEl: ".tz-hs-prev",
 							nextEl: ".tz-hs-next",
@@ -150,6 +150,23 @@ Last change:    00/00/00
 								return '<span class="' + className + '">' + (index + 1) + "</span>";
 							},
 
+						},
+					});
+				};
+				if($(".tz-slider-active2").length) {
+					var TZSlider = new Swiper(".tz-slider-active2", {
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						// autoplay: {
+						// 	delay: 4000,
+						// },
+						navigation: {
+							prevEl: ".tz-hs-prev2",
+							nextEl: ".tz-hs-next2",
 						},
 					});
 				};
