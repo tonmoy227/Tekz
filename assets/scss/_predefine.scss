@@ -262,6 +262,12 @@ a {
 		padding: 15px 30px;
 		border-radius: 100px;
 		background-color: var(--tz-prime-c);
+		&:hover {
+			background-color: var(--tz-title-color);
+			span {
+				animation: toLeftFromRight 0.5s forwards;
+			}
+		}
 	}
 }
 // txa-common-css-start

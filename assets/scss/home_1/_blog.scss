@@ -12,6 +12,12 @@
 	border-radius: 15px;
 	margin-bottom: 30px;
 	background-color: #F6F6F6;
+	.item-img {
+		overflow: hidden;
+		img {
+			transition: all 500ms ease-in-out;
+		}
+	}
 	.item-text {
 		padding: 35px 30px;
 		.item-meta {
@@ -41,12 +47,31 @@
 				bottom: 0;
 				content: '';
 				height: 1px;
-				width: 100%;
+				width: 0%;
 				position: absolute;
+				transition: all 500ms ease-in-out;
 				background-color: var(--tz-prime-c);
 			}
 			i {
 				font-size: 14px;
+				transition: all 300ms ease-in-out;
+			}
+		}
+	}
+	&:hover {
+		.item-text {
+			.read_more {
+				&:before {
+					width: 100%;
+				}
+				i {
+					margin-left: 8px;
+				}
+			}
+		}
+		.item-img {
+			img {
+				transform: scale(1.08);
 			}
 		}
 	}

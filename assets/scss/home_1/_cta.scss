@@ -70,5 +70,9 @@
 	}
 	.img-wrap1 {
 		margin-top: -180px;
+		animation: slidedown 20s linear infinite;
+	}
+	.img-wrap2 {
+		animation: slideup 20s linear infinite;
 	}
 }

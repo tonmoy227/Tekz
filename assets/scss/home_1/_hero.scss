@@ -22,7 +22,8 @@
 	.tz-vect-shape1 {
 		right: -1%;
 		z-index: -1;
-		bottom: -10%;
+		bottom: -100%;
+		transition:  1.5s cubic-bezier(.61,-0.63,.46,1.48);
 		img {
 			opacity: .05;
 			mix-blend-mode: soft-light;
@@ -195,9 +196,9 @@
 			left: 135px;
 			overflow: hidden;
 			position: absolute;
-			transform: scale(0);
 			border-radius: 21px;
 			border: 2px solid #FFFFFF;
+			transform: scale(0) rotate(360deg);
 			box-shadow: 0px 10px 24px 0px #0000001F;
 			transition:  1s cubic-bezier(.61,-0.63,.46,1.48);
 			@media #{$xs} {
@@ -324,6 +325,9 @@
 		.tz-hs-shape {
 			top: -36%;
 		}
+		.tz-vect-shape1 {
+			bottom: -10%;
+		}
 		.tz-hs-text {
 			.tz-hs-slug {
 				opacity: 1;
@@ -398,7 +402,7 @@
 				transition-delay: 1000ms;
 			}
 			.item-img3 {
-				transform: scale(1.0);
+				transform: scale(1.0) rotate(0);
 				transition-delay: 1300ms;
 			}
 			.tz-hs-user {

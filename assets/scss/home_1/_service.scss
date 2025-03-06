@@ -1,4 +1,5 @@
 .tz-service-sec {
+	overflow: hidden;
 	background-color: var(--tz-title-color);
 	.tz-section-title {
 		.sec_title {
@@ -11,10 +12,16 @@
 	}
 }
 .tz-ser1-item {
+	opacity: 0;
 	gap: 30px 100px;
+	transform: translateY(100%);
 	padding: 40px 60px 40px 100px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	transition: all 400ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	&:is(.in-view) {
+		transform: translateY(0);
+		opacity: 1;
+	}
 	@media #{$lg,$md,$sm,$xs} {
 		gap: 15px 50px;
 		padding: 40px 60px 40px 60px;
@@ -40,12 +47,14 @@
 			.inner-icon {
 				top: 0;
 				left: 0;
+				z-index: 1;
 				width: 100px;
 				height: 100px;
 				position: absolute;
 				border-top-left-radius: 10px;
 				border-bottom-right-radius: 10px;
 				background-color: #fff;
+				transition: all 500ms ease-in-out;
 			}
 			.inner-img {
 				height: 198px;
@@ -60,6 +69,7 @@
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
+					transition: all 500ms ease-in-out;
 				}
 			}
 		}
@@ -92,6 +102,19 @@
 			color: rgba(255, 255, 255, 1);
 		}
 		.item-img-text {
+			.item-img {
+				.inner-icon {
+					top: 22%;
+					left: 50%;
+					border-radius: 100%;
+					transform: translate(-50%);
+				}
+				.inner-img {
+					img {
+						transform: scale(1.2);
+					}
+				}
+			}
 			.item-text {
 				p {
 					color: #fff;

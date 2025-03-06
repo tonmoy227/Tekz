@@ -1,3 +1,14 @@
+@keyframes swing {
+	20% { transform: rotate(20deg); }	
+	40% { transform: rotate(-15deg); }
+	60% { transform: rotate(10deg); }	
+	80% { transform: rotate(-10deg); }	
+	100% { transform: rotate(0deg); }
+}
+@keyframes elastic-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(720deg); }
+}
 .tz-footer-sec {
 	z-index: 1;
 	overflow: hidden;
@@ -6,6 +17,9 @@
 		top: 25%;
 		left: 70px;
 		z-index: -1;
+		span {
+			animation: elastic-spin 5s infinite ease;
+		}
 	}
 	.tz-ftr-sh1 {
 		z-index: -1;
@@ -53,6 +67,8 @@
 		background-color: var(--tz-prime-c);
 		i {
 			font-size: 28px;
+			transform-origin: top top;
+			animation: swing 2s ease infinite;
 		}
 	}
 	.item-text {
@@ -96,6 +112,7 @@
 		padding: 13px 35px;
 		position: absolute;
 		border-radius: 50px;
+		transition: all 500ms ease-in-out;
 		background-color: var(--tz-prime-c);
 		@media #{$lg,$md,$sm,$xs} {
 			padding: 13px 25px;
@@ -103,6 +120,10 @@
 		@media #{$xxs} {
 			position: static;
 			margin-top: 15px;
+		}
+		&:hover {
+			color: #fff;
+			background-color: var(--tz-title-color);
 		}
 	}
 }
@@ -144,6 +165,10 @@
 				justify-content: center;
 				background-color: #0D1329;
 				color: rgba(255, 255, 255, 0.5);
+				&:hover {
+					color: #fff;
+					background-color: var(--tz-prime-c);
+				}
 			}
 		}
 	}
@@ -162,6 +187,9 @@
 					position: absolute;
 					color: var(--tz-prime-c);
 					font-family: 'Font Awesome 5 Free';
+				}
+				&:hover {
+					color: var(--tz-prime-c);
 				}
 			}
 		}
@@ -253,6 +281,9 @@
 		}
 		a {
 			color: #fff;
+			&:hover {
+				color: var(--tz-prime-c);
+			}
 		}
 	}
 }

@@ -1,7 +1,22 @@
+@keyframes icon-bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	60% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+}
 .tz-about-section {
 	background-color: #EDECFD;
 }
 .tz-ab-img-wrap {
+	overflow: hidden;
 	.item-img {
 		height: 514px;
 		max-width: 600px;
@@ -90,6 +105,7 @@
 		border-radius: 100%;
 		background-color: #fff;
 		box-shadow: 0px 10px 26px 0px rgba(28, 11, 80, 0.09);
+		animation: icon-bounce 1s ease-out infinite;
 	}
 	.item-text {
 		max-width: 490px;
