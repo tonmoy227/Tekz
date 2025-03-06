@@ -449,7 +449,7 @@ Last change:    00/00/00
 				scale: 1 
 			});
 			proSroll.to(section, {
-				scale: index === otherSections_2.length - 1 ? 1 : 0.8,
+				scale: index === otherSections_2.length - 1 ? 1 : 0.9,
 				scrollTrigger: {
 					trigger: section,
 					pin: section,
