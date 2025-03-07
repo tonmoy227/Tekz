@@ -1,0 +1,128 @@
+@keyframes border_animation {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+	20% {
+		-webkit-transform: scale(1.24);
+		transform: scale(1.24);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(2.1);
+		transform: scale(2.1);
+		opacity: 0;
+	}
+}
+.tz-ab2-content {
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 15px;
+	padding: 115px 120px;
+	@media #{$lg,$md,$sm} {
+		padding: 80px 60px;
+	}
+	@media #{$xs} {
+		padding: 80px 30px;
+	}
+	.ab2-shape2 {
+		top: -170px;
+		left: -200px;
+		@media #{$xs} {
+			display: none;
+		}
+	}
+	.ab2-shape1 {
+		top: -100px;
+		left: -123px;
+		@media #{$xs} {
+			display: none;
+		}
+	}
+	.ab_video_play_btn {
+		top: 50%;
+		right: 210px;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		position: absolute;
+		border-radius: 100%;
+		background-color: #fff;
+		color: var(--tz-prime-c);
+		transform: translateY(-50%);
+		@media #{$lg,$md,$sm,$xs} {
+			z-index: 2;
+			position: static;
+			margin-bottom: 60px;
+			transform: translateY(0);
+		}
+		a {
+			width: 100%;
+			height: 100%;
+			font-size: 30px;
+		}
+		.video_btn_border {
+			top: 0;
+			left: 0;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			border-radius: 100%;
+			border: 2px solid #FFFFFF78;
+			animation-play-state: running;
+			-webkit-animation-play-state: running;
+			-webkit-animation: border_animation 3.9s linear 0s infinite;
+			animation: border_animation 3.9s linear 0s infinite;
+			&.border_wrap-2 {
+				-webkit-animation-delay: 1.3s;
+				animation-delay: 1.3s;
+			}
+			&.border_wrap-3 {
+				-webkit-animation-delay: 2.6s;
+				animation-delay: 2.6s; 
+			}
+		}
+	}
+	.ab-bg2 {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		&:before,
+		&:after {
+			top: 0;
+			left: 0;
+			width: 100%;
+			content: '';
+			height: 100%;
+			position: absolute;
+			background: linear-gradient(90deg, rgba(5, 9, 26, 0.41) 29.15%, rgba(2, 12, 56, 0.3034) 75.35%);
+		}
+		&:after {
+			background: linear-gradient(90deg, rgba(8, 8, 39, 0.89) 29.15%, rgba(2, 12, 56, 0) 75.35%);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.tz-section-title {
+		max-width: 525px;
+		@media #{$lg,$md,$sm,$xs} {
+			max-width: 100%;
+		}
+		.sec_title {
+			color: #fff;
+		}
+	}
+	.tz-btn-1 {
+		a {
+			color: var(--tz-prime-c);
+			background-color: #fff;
+		}
+	}
+}
