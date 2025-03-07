@@ -1,0 +1,180 @@
+.tz-faq-sec {
+	z-index: 1;
+	overflow: hidden;
+	background-color: #05091A;
+	.tz-faq-img {
+		top: 0;
+		left: 0;
+		width: 40%;
+		height: 100%;
+		.item-img {
+			width: 100%;
+			height: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.item-rate {
+			gap: 20px;
+			right: 60px;
+			bottom: 60px;
+			padding: 26px 35px;
+			position: absolute;
+			border-radius: 15px;
+			background-color: #fff;
+			@media #{$xxs} {
+				left: 0;
+				bottom: 0;
+				gap: 10px;
+				width: 100%;
+				border-radius: 0;
+				padding: 26px 25px;
+			}
+			.item-user {
+				ul {
+					display: flex;
+				}
+				li {
+					width: 44px;
+					height: 44px;
+					overflow: hidden;
+					margin-left: -20px;
+					border-radius: 100%;
+					border: 2px solid #FFFFFF;
+					transition: all 400ms ease-in-out;
+					&:hover {
+						transform: scale(1.1);
+					}
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+			.item-text {
+				span {
+					font-size: 18px;
+					font-weight: 700;
+					color: var(--tz-title-color);
+					@media #{$xxs} {
+						font-size: 15px;
+					}
+				}
+				li {
+					color: #FFBE11;
+				}
+			}
+		}
+		@media #{$lg,$md,$sm,$xs} {
+			left: 0;
+			width: 100%;
+			height: 400px;
+			margin-bottom: 40px;
+			position: relative !important;
+		}
+	}
+	.tz-faq-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.tz-faq-content {
+	justify-content: end;
+}
+.tz-faq-text-wrap {
+	max-width: 715px;
+	@media #{$xl} {
+		max-width: 680px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		max-width: 100%;
+	}
+	.tz-section-title {
+		.subtitle,
+		.sec_title {
+			color: #fff;
+		}
+	}
+}
+.tz-faq-accordion {
+	width: 100%;
+	@media #{$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.accordion-item,
+	.accordion-button:not(.collapsed),
+	.accordion-button {
+		background-color: transparent;
+	}
+	.accordion-item {
+		padding: 0;
+		border: none;
+		overflow: hidden;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		background-color: #fff;
+		transition: all 500ms ease-in-out;
+	}
+	.accordion-button {
+		padding: 0;
+		border: none;
+		font-size: 18px;
+		font-weight: 600;
+		border-radius: 10px;
+		position: relative;
+		border-radius: 0;
+		color: var(--tz-title-color);
+		transition: all 200ms ease;
+		padding: 16px 28px 17px 30px;
+		span {
+			max-width: 85%;
+			display: inline-block;
+		}
+	}
+
+	.accordion-button:focus {
+		border: none;
+		box-shadow: none;
+	}
+	.accordion-body {
+		font-size: 16px;
+		line-height: 1.625;
+		padding: 26px 30px 30px;
+	}
+	.accordion-button::after {
+		top: 15px;
+		right: 20px;
+		opacity: .7;
+		content: '\f078';
+		font-weight: 900;
+		position: absolute;
+		border-radius: 100%;
+		background-image: none;
+		font-family: 'Font Awesome 6 free';
+		transition: all 500ms ease;
+	}
+	.accordion-button:not(.collapsed) { 
+		color: #fff;
+		box-shadow: none;
+		padding-bottom: 15px;
+		background-color: var(--tz-prime-c);
+		&:before {
+			opacity: 1;
+			color: var(--tz-prime-c);
+		}
+		&:after {
+			opacity: 1;
+			color: #fff;
+			content: '\f078';
+		}
+	}
+}

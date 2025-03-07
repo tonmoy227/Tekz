@@ -298,6 +298,82 @@ Last change:    00/00/00
 			},
 		});
 	};
+// Service Slider
+	if($(".tz-pro2-slide").length) {
+		var swiper3 = new Swiper(".tz-pro2-slide", {
+			speed: 1000,
+			loop: true,
+			spaceBetween: 30,
+			pagination: {
+				el: ".agt-pro2-pagination-2",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".agt-pro2-next",
+				prevEl: ".agt-pro2-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 1,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 4,
+				},
+				1600: {
+					slidesPerView: 4,
+				},
+			},
+
+		});
+	}
+// Team Slider
+	if($(".tz-team2-slide").length) {
+		var swiper3 = new Swiper(".tz-team2-slide", {
+			speed: 1000,
+			loop: true,
+			spaceBetween: 30,
+			navigation: {
+				nextEl: ".tz-team2-next",
+				prevEl: ".tz-team2-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 2,
+				},
+				1400: {
+					slidesPerView: 2,
+				},
+				1600: {
+					slidesPerView: 2,
+				},
+			},
+
+		});
+	}
 // Animation
 	gsap.utils.toArray(' .left_view').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
