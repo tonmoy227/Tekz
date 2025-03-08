@@ -132,3 +132,25 @@
 		}
 	}
 }
+.swiper-slide-next {
+	.tz-pro2-item {
+		.item-img {
+			&:before {
+				opacity: 1;
+				height: 100%;
+				visibility: visible;
+			}
+		}
+		.item-text-wrap { 
+			opacity: 1;
+			bottom: 30px;
+			visibility: visible;
+		}
+		.item-arrow {
+			top: 30px;
+			opacity: 1;
+			right: 30px;
+			visibility: visible;
+		}
+	}
+}

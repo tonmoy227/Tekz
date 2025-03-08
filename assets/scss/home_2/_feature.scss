@@ -75,4 +75,11 @@
 		max-width: 303px;
 		padding-left: 10px;
 	}
+	&:hover {
+		.item-icon-number {
+			.item-icon {
+				animation: icon-bounce 1s ease-out infinite;
+			}
+		}
+	}
 }

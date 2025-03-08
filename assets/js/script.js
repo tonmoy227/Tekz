@@ -116,6 +116,15 @@ Last change:    00/00/00
 			});
 		});
 	}
+	if($('.tz-split-2').length) {
+		var txtSplit = $('.tz-split-2');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines",
+				linesClass: "split-line"
+			});
+		});
+	}
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -161,9 +170,9 @@ Last change:    00/00/00
 						fadeEffect: {
 							crossFade: true
 						},
-						// autoplay: {
-						// 	delay: 4000,
-						// },
+						autoplay: {
+							delay: 4000,
+						},
 						navigation: {
 							prevEl: ".tz-hs-prev2",
 							nextEl: ".tz-hs-next2",
@@ -283,6 +292,11 @@ Last change:    00/00/00
 		pauseOnHover: true,
 		startVisible:true,
 	});
+// counter-activation
+	$('.counter').counterUp({
+		delay: 10,
+		time: 5000
+	});
 // Testimonial Slider
 	if($(".tz-testi-slide").length) {
 		var testSlider = new Swiper(".tz-testi-slide", {
@@ -304,6 +318,9 @@ Last change:    00/00/00
 			speed: 1000,
 			loop: true,
 			spaceBetween: 30,
+			autoplay: {
+				delay: 3000,
+			},
 			pagination: {
 				el: ".agt-pro2-pagination-2",
 				clickable: true,
@@ -451,6 +468,22 @@ Last change:    00/00/00
 		duration: 1,
 		stagger: -.3,
 	})
+	var TzProcess = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".tz-wrkp-content",
+			start: "top 70%",
+			toggleActions: "play reverse play reverse",
+			markers: false,
+		},
+	})
+	TzProcess
+	.from(".tz-wrkp-item", {
+		yPercent: 100,
+		opacity: 0,
+		ease: "back.out(1.5)",
+		duration: 1,
+		stagger: -.3,
+	})
 	gsap.utils.toArray(' .slide_view_1').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -532,6 +565,7 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 1, scale: .5, }, {opacity: 1, scale: 1, duration: 1, immediateRender: false})
 	});
+
 	//Animation
 
 	if(window.innerWidth> 991){
@@ -557,4 +591,108 @@ Last change:    00/00/00
 			})
 		});
 	};
+	gsap.utils.toArray(".img-parallax").forEach(function(container) {
+		let image = container.querySelector("img");
+
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: container,
+				scrub: true,
+				pin: false,
+			},
+		}); 
+		tl.from(image, {
+			yPercent: -30,
+			ease: "none",
+		}).to(image, {
+			yPercent: 30,
+			ease: "none",
+		}); 
+	});
+	gsap.utils.toArray(' .left_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 30%",
+				start: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: .5, x: "200"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
+	});
+
+	gsap.utils.toArray(' .right_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 30%",
+				start: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: .5,  xPercent: "-100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .right_view_2').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 30%",
+				start: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: .5,  x: "200"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
+	});
+
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 2,
+				start: "top 80%",
+				end: "top 90%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0,  y: "=70"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(".img-zoom").forEach(function (container) {
+		let image = container.querySelector("img");
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: container,
+				scrub: true,
+				pin: false,
+			},
+		});
+		tl.from(image, {
+			scale: 1.5,
+			filter: "grayscale(1)",
+			ease: "none",
+		}).to(image, {
+			scale: 1,
+			filter: "grayscale(0)",
+			ease: "none",
+		});
+	});
+
 })(jQuery);

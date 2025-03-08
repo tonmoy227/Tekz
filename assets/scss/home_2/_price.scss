@@ -1,0 +1,116 @@
+.tz-price-sec {
+	z-index: 1;
+	overflow: hidden;
+	background-color: var(--tz-prime-c);
+	.tz-section-title {
+		.subtitle {
+			color: #fff;
+		}
+		.sec_title {
+			color: #fff;
+		}
+	}
+	.tz-price-shape {
+		top: -10%;
+		left: -5%;
+		z-index: -1;
+	}
+}
+.tz-price-item {
+	border-radius: 15px;
+	margin-bottom: 30px;
+	padding: 75px 20px 20px;
+	background-color: #F2F3F4;
+	@media #{$md,$sm,$xs} {
+		padding-top: 45px;
+	}
+	.tz-price-tag {
+		top: 20px;
+		right: 20px;
+		font-weight: 600;
+		padding: 5px 20px;
+		position: absolute;
+		margin-bottom: 70px;
+		border-radius: 100px;
+		background-color: #fff;
+		color: var(--tz-title-color);
+		border: 1px solid var(--tz-prime-c);
+		@media #{$lg,$md,$sm,$xs} {
+			position: static;
+			text-align: center;
+		}
+	}
+	.tz-price-wrap {
+		padding: 30px;
+		border-radius: 15px;
+		background-color: #fff;
+		.item-icon {
+			width: 93px;
+			height: 93px;
+			margin-top: -80px;
+			border-radius: 100%;
+			background-color: var(--tz-prime-c);
+		}
+		.item-top {
+			margin-top: 35px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #EBE7F6;
+			span {
+				font-size: 18px;
+				font-weight: 600;
+				padding-bottom: 15px;
+				color: var(--tz-title-color);
+			}
+			h3 {
+				font-size: 40px;
+				font-weight: 700;
+				color: var(--tz-title-color);
+				sub {
+					bottom: 0;
+					font-size: 16px;
+					font-weight: 400;
+				}
+			}
+		}
+		.item-list {
+			padding-top: 28px;
+			h4 {
+				font-size: 18px;
+				font-weight: 600;
+				padding-bottom: 18px;
+			}
+			li {
+				font-weight: 500;
+				padding-left: 15px;
+				position: relative;
+				margin-bottom: 10px;
+				letter-spacing: -.5px;
+				&:before {
+					left: 0;
+					top: 9px;
+					width: 7px;
+					content: '';
+					height: 7px;
+					position: absolute;
+					border-radius: 100%;
+					background-color: var(--tz-title-color);
+				}
+			}
+		}
+		.tz-price-btn {
+			margin-top: 24px;
+			a {
+				width: 100%;
+				color: #fff;
+				font-weight: 700;
+				padding: 15px 20px;
+				text-align: center;
+				border-radius: 100px;
+				background-color: var(--tz-prime-c);
+				&:hover {
+					background-color: var(--tz-title-color);
+				}
+			}
+		}
+	}
+}

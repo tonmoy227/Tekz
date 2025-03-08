@@ -359,6 +359,9 @@
 						font-size: 12px;
 						margin: 0px 3px;
 					}
+					&:hover {
+						transform: scale(1.1);
+					}
 				}
 			}
 		}
@@ -406,6 +409,9 @@
 					padding: 13px 30px;
 					border-radius: 100px;
 					background-color: var(--tz-prime-c);
+					&:hover {
+						background-color: var(--tz-title-color);
+					}
 				}
 			}
 			.offcanvas-trigger {
@@ -418,6 +424,7 @@
 					height: 50px;
 					border-radius: 100%;
 					background-color: #F6F6F6;
+					transition: all 400ms ease-in-out;
 					span {
 						width: 14px;
 						height: 2px;
@@ -426,6 +433,13 @@
 						margin: 3px auto;
 						border-radius: 100px;
 						background-color: var(--tz-prime-c);
+						transition: all 400ms ease-in-out;
+					}
+					&:hover {
+						background-color: var(--tz-prime-c);
+						span {
+							background-color: #fff;
+						}
 					}
 				}
 			}

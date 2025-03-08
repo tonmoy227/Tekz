@@ -2,6 +2,14 @@
 	overflow: hidden;
 	display: flow-root;
 }
+.tz-sponsor-sec {
+	&:is(.ver_2) {
+		background-color: #F2F2F2;
+		.tz-sponsor-item {
+			background-color: #fff;
+		}
+	}
+}
 .tz-sponsor-item {
 	margin: 8px;
 	border-radius: 15px;
