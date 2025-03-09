@@ -41,6 +41,11 @@ body {
 		text-align: center;
 		background-size: 200%, 1px;
 	}
+	&:is(.ver_2) {
+		.container {
+			max-width: 1428px;
+		}
+	}
 }
 body::-webkit-scrollbar {
 	width: 6px;
