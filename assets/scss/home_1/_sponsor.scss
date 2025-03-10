@@ -10,6 +10,14 @@
 		}
 	}
 }
+.tz-ab3-sponsor {
+	z-index: 1;
+	.tz-ab3-shape {
+		top: -162%;
+		right: -53%;
+		z-index: -1;
+	}
+}
 .tz-sponsor-item {
 	margin: 8px;
 	border-radius: 15px;
@@ -21,6 +29,39 @@
 		@media #{$xs} {
 			width: 220px;
 			height: 100px;
+		}
+	}
+	&:is(.ver_3) {
+		background-color: #fff;
+		.item-img {
+			height: 120px;
+		}
+	}
+}
+.tz-ab3-btm-1 {
+	overflow: hidden;
+	display: flow-root;
+}
+.tz-ab3-bottom-marque {
+	padding: 27px 0px;
+	background-color: var(--tz-prime-c);
+}
+.tz-ab3-btm-text {
+	margin: 0px 40px;
+	display: inline-block;
+	.item-text {
+		color: #fff;
+		font-size: 30px;
+		font-weight: 700;
+		position: relative;
+		&:before {
+			top: 23px;
+			width: 20px;
+			height: 1px;
+			content: '';
+			right: -48px; 
+			position: absolute;
+			background-color: #fff;
 		}
 	}
 }
