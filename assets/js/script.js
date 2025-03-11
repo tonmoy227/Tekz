@@ -312,6 +312,41 @@ Last change:    00/00/00
 			},
 		});
 	};
+	if($(".tz-testi3-slider").length) {
+		var swiper3 = new Swiper(".tz-testi3-slider", {
+			speed: 1000,
+			loop: true,
+			spaceBetween: 30,
+			navigation: {
+				nextEl: ".tz-testi3-next",
+				prevEl: ".tz-testi3-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+			},
+
+		});
+	}
 // Service Slider
 	if($(".tz-pro2-slide").length) {
 		var swiper3 = new Swiper(".tz-pro2-slide", {
@@ -386,6 +421,79 @@ Last change:    00/00/00
 				},
 				1600: {
 					slidesPerView: 2,
+				},
+			},
+
+		});
+	}
+	if($(".tz-team3-slide").length) {
+		var swiper3 = new Swiper(".tz-team3-slide", {
+			speed: 1000,
+			loop: true,
+			spaceBetween: 50,
+			centeredSlides: true,
+			navigation: {
+				nextEl: ".tz-team3-next",
+				prevEl: ".tz-team3-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+			},
+
+		});
+	}
+// Project Slider	
+	if($(".tz-pro3-slide").length) {
+		var swiper3 = new Swiper(".tz-pro3-slide", {
+			speed: 1000,
+			loop: true,
+			spaceBetween: 30,
+			centeredSlides: true,
+			navigation: {
+				nextEl: ".tz-pro3-next",
+				prevEl: ".tz-pro3-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
 				},
 			},
 
