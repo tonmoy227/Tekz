@@ -72,6 +72,13 @@
 			display: none;
 		}
 	}
+	.tz-cta3-shape4 {
+		top: 30%;
+		left: 3%;
+		@media #{$md,$sm,$xs} {
+			display: none;
+		}
+	}
 }
 .tz-cta3-area {
 	max-width: 565px;

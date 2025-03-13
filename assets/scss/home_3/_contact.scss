@@ -1,6 +1,7 @@
 .tz-contact3-sec {
 	z-index: 1;
 	overflow: hidden;
+	background-color: var(--tz-prime-c);
 	.tz-cont3-bg {
 		top: 0;
 		left: 0;
@@ -45,8 +46,13 @@
 		background-color: #fff;
 		color: var(--tz-title-color);
 		background-color: #fff;
+		border: 1px solid transparent;
+		transition: all 400ms ease-in-out;
 		&::placeholder {
 			color: var(--tz-title-color);
+		}
+		&:focus {
+			border: 1px solid var(--tz-prime-c);
 		}
 	}
 	textarea {
@@ -59,6 +65,10 @@
 		padding: 15px;
 		font-weight: 700;
 		border-radius: 8px;
+		transition: all 400ms ease-in-out;
 		background-color: var(--tz-prime-c);
+		&:hover {
+			background-color: var(--tz-title-color);
+		}
 	}
 }

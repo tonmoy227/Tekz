@@ -128,6 +128,9 @@ Last change:    00/00/00
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
+
+			CustomEase.create("ease1", ".645,.045,.355,1");
+
 			let preloader = document.querySelector("#preloader");
 			if (preloader) {
 				preloader.classList.add("preloaded");
@@ -176,6 +179,36 @@ Last change:    00/00/00
 						navigation: {
 							prevEl: ".tz-hs-prev2",
 							nextEl: ".tz-hs-next2",
+						},
+					});
+				};
+				var TZHeroCategory = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".tz-hero3-cate-content",
+						start: "top 90%",  
+						toggleActions: "play reverse play reverse",
+						markers: false  ,
+					},
+					defaults: { duration: 1,
+						ease: "bounce.out", 
+					} 
+				});
+				TZHeroCategory.from(".tz-hero3-category ul li" , { yPercent: -100, opacity: 0, stagger: .25 })
+
+				if($(".tz-hero3-slider").length) {
+					var TZSlider = new Swiper(".tz-hero3-slider", {
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						pagination: {
+							el: ".tz-hero3-pagination",
+							clickable: true,
+						},
+						autoplay: {
+							delay: 4000,
 						},
 					});
 				};
@@ -656,7 +689,7 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'bottom bottom'})
 		.from(el, { opacity: 1, scale: 1, xPercent: -100}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
 	});
-	gsap.utils.toArray(' .zoom_view').forEach((el, index) => { 
+	gsap.utils.toArray('.zoom_view').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
 				trigger: ".tz-testimonial-sec",
@@ -673,7 +706,142 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 1, scale: .5, }, {opacity: 1, scale: 1, duration: 1, immediateRender: false})
 	});
+	gsap.utils.toArray(' .zoom_view_3').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".tz-contact3-sec",
+				scrub: 2,
+				end: "top -10%",
+				start: "top 50%",
+				ease: "back.out(1.5)",
+				toggleActions: "play none none reverse",
+				markers: false,
+			}
+		})
 
+		tlcta
+		.set(el, {transformOrigin: 'bottom bottom'})
+		.from(el, { opacity: 1, yPercent: -100, }, {opacity: 1, yPercent: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .zoom_view_4').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".tz-team3-sec",
+				scrub: 2,
+				end: "top -50%",
+				start: "top 50%",
+				ease: "back.out(1.5)",
+				toggleActions: "play none none reverse",
+				markers: false,
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'top top'})
+		.from(el, { opacity: 1, yPercent: 100, }, {opacity: 1, yPercent: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .zoom_view_5').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".tz-pro3-sec",
+				scrub: 2,
+				end: "top -50%",
+				start: "top 50%",
+				ease: "back.out(1.5)",
+				toggleActions: "play none none reverse",
+				markers: false,
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'top top'})
+		.from(el, { opacity: 1, yPercent: 100, }, {opacity: 1, yPercent: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .up_down').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".tz-contact3-sec",
+				scrub: 2,
+				end: "top -10%",
+				start: "top 50%",
+				ease: "back.out(1.5)",
+				toggleActions: "play none none reverse",
+				markers: false,
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'top top'})
+		.from(el, { opacity: 1, scaleY: 0, }, {opacity: 1, scaleY: 1, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .tz-ab3-circle').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 3,
+				start: "top 0%",
+				end: "top -100%",
+				toggleActions: "play reverse none reverse",
+				markers: false,
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'top top'})
+		.fromTo(el, { y: -300}, { y: 300, duration: 1})
+	});
+	gsap.utils.toArray(' .tz-ab3-circle').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 3,
+				start: "top 0%",
+				end: "top -100%",
+				toggleActions: "play reverse none reverse",
+				markers: false,
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'top top'})
+		.fromTo(el, { y: -300}, { y: 300, duration: 1})
+	});
+	gsap.utils.toArray(".tz-img-anim").forEach(element => {
+		const animTime = parseFloat(element.getAttribute("tz-anim-time")) || 1; 
+		gsap.fromTo(
+			element,
+			{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" },
+			{ 
+				clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", 
+				ease: "ease1",
+				duration: animTime,
+				scrollTrigger: {
+					trigger: element,
+					start: "top 50%",
+					toggleActions: "play none none reverse",
+					markers: false,
+				},
+			}
+			);
+	});
+	gsap.utils.toArray(".tz-img-anim-2").forEach(element => {
+		const animTime = parseFloat(element.getAttribute("tz-anim-time")) || 1; 
+		gsap.fromTo(
+			element,
+			{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+			{ 
+				clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", 
+				ease: "ease1",
+				duration: animTime,
+				scrollTrigger: {
+					trigger: element,
+					start: "top 50%",
+					toggleActions: "play none none reverse",
+					markers: false,
+				},
+			}
+			);
+	}); 
 	//Animation
 
 	if(window.innerWidth> 991){
