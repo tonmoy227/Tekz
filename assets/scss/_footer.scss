@@ -179,6 +179,11 @@
 		font-weight: 700;
 		padding-bottom: 24px;
 	}
+	&:is(.ver_2) {
+		.widget-title {
+			font-size: 24px;
+		}
+	}
 	.logo-widget {
 		max-width: 310px;
 		@media #{$lg,$md,$sm,$xs} {
@@ -343,6 +348,40 @@
 			}
 		}
 	}
+	.newslatter-widget3 {
+		width: 325px;
+		p {
+			color: #B0B2B7;
+			padding-bottom: 30px;
+		}
+		form {
+			height: 50px;
+			position: relative;
+			input {
+				color: #fff;
+				width: 100%;
+				height: 100%;
+				border: none;
+				padding-left: 15px;
+				border-radius: 4px;
+				background-color: #303137;
+				&::placeholder {
+					color: #fff;
+				}
+			}
+			button {
+				top: 0;
+				right: 0;
+				color: #fff;
+				height: 50px;
+				font-weight: 700;
+				padding: 0px 25px;
+				border-radius: 4px;
+				position: absolute;
+				background-color: var(--tz-prime-c);
+			}
+		}
+	}
 }
 .tz-footer-copyright {
 	gap: 15px;
@@ -483,6 +522,36 @@
 				color: #fff;
 				background-color: var(--tz-prime-c);
 			}
+		}
+	}
+}
+.tz-footer-cta-wrap {
+	padding-top: 40px; 
+	padding-bottom: 40px;
+	border-top: 1px solid #21263D;
+}
+.tz-ft-cta-item {
+	gap: 20px;
+	.item-icon {
+		color: #fff;
+		width: 65px;
+		height: 65px;
+		font-size: 20px;
+		border-radius: 100%;
+		background-color: var(--tz-prime-c);
+	}
+	.item-text {
+		h3 {
+			color: #67686A;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			padding-bottom: 10px;
+		}
+		a {
+			color: #fff;
+			display: block;
+			max-width: 230px;
 		}
 	}
 }

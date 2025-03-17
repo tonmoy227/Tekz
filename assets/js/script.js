@@ -182,6 +182,27 @@ Last change:    00/00/00
 						},
 					});
 				};
+				if($(".tz-hero4-active").length) {
+					var AGTh3 = new Swiper(".tz-hero4-active", {
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						// autoplay: {
+						// 	delay: 4000,
+						// },
+						pagination: {
+							el: ".tz-hs4-pagi",
+							clickable: true,
+							renderBullet: function (index, className) {
+								return '<span class="' + className + '">' + (index + 1) + "</span>";
+							},
+
+						},
+					});
+				};
 				var TZHeroCategory = gsap.timeline({
 					scrollTrigger: {
 						trigger: ".tz-hero3-cate-content",
@@ -380,6 +401,18 @@ Last change:    00/00/00
 
 		});
 	}
+	if ($(".progress-bar").length) {
+		var $progress_bar = $('.progress-bar');
+		$progress_bar.appear();
+		$(document.body).on('appear', '.progress-bar', function() {
+			var current_item = $(this);
+			if (!current_item.hasClass('appeared')) {
+				var percent = current_item.data('percent');
+				current_item.css('width', percent + '%').addClass('appeared').parent().append('<span>' + percent + '%' + '</span>');
+			}
+
+		});
+	};
 // Service Slider
 	if($(".tz-pro2-slide").length) {
 		var swiper3 = new Swiper(".tz-pro2-slide", {

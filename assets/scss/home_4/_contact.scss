@@ -1,0 +1,160 @@
+.tz-contact4-text-wrap {
+	max-width: 650px;
+	.tz-section-title {
+		.subtitle {
+			color: #fff;
+		}
+		.sec_title,p {
+			color: #fff;
+		}
+	}
+}
+.tz-contact4-content {
+	display: flex;
+	gap: 30px 40px;
+	justify-content: space-between;
+}
+.tz-contact4-list {
+	li {
+		color: #fff;
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 12px;
+		&:before {
+			left: 0;
+			top: 8px;
+			width: 8px;
+			content: '';
+			height: 8px;
+			position: absolute;
+			border-radius: 100%;
+			background-color: #fff;
+		}
+	}
+}
+.tz-contact4-play {
+	gap: 30px;
+	flex-wrap: wrap;
+	.item-icon {
+		a {
+			color: #fff;
+			width: 150px;
+			height: 80px;
+			display: flex;
+			font-size: 24px;
+			align-items: center;
+			border-radius: 100px;
+			justify-content: center;
+			background-color: var(--tz-prime-c);
+		}
+	}
+	.item-text {
+		h3 {
+			color: #fff;
+			font-size: 24px;
+			font-weight: 700;
+			padding-bottom: 8px;
+		}
+		p {
+			color: #fff;
+			font-weight: 600;
+		}
+	}
+}
+.tz-workp4-wrap {
+	.tz-section-title {
+		.sec_title {
+			color: #fff;
+		}
+	}
+}
+.tz-workp4-item {
+	padding: 45px;
+	position: relative;
+	border-radius: 15px;
+	background-color: #fff;
+	&:before {
+		top: 25px;
+		z-index: 1;
+		width: 90px;
+		content: "";
+		right: -61px;
+		height: 117px;
+		position: absolute;
+		background-image: url(../img/icon/arrow.svg);
+	}
+	.item-title-icon {
+		gap: 15px 25px;
+		margin-bottom: 30px;
+	}
+	.item-icon {
+		width: 55px;
+		height: 55px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.item-title {
+		line-height: 1;
+		font-size: 60px;
+		font-weight: 800;
+		color: #683BF21C;
+	}
+	.item-text {
+		h3 {
+			font-size: 24px;
+			font-weight: 700;
+			padding-bottom: 10px;
+		}
+	}
+}
+.col-lg-4 {
+	&:last-child {
+		.tz-workp4-item {
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+.tz-contact4-form-area {
+	max-width: 695px;
+	padding: 40px 50px;
+	border-radius: 15px;
+	background-color: #fff;
+}
+.tz-contact4-form {
+	h3 {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #E4E6EA;
+	}
+	label {
+		display: block;
+		margin-bottom: 10px;
+	}
+	input,textarea {
+		width: 100%;
+		height: 50px;
+		margin-bottom: 30px;
+		padding-left: 15px;
+		border-radius: 5px;
+		border: 1px solid #E4E6EA;
+	}
+	textarea {
+		height: 100px;
+		padding-top: 20px;
+	}
+	button {
+		color: #fff;
+		width: 100%;
+		border: none;
+		padding: 15px;
+		font-weight: 700;
+		border-radius: 5px;
+		background-color: var(--tz-prime-c);
+	}
+}

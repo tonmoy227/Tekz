@@ -1,0 +1,116 @@
+.tz-whyc4-sec {
+	overflow: hidden;
+}
+.tz-whyc4-content {
+	gap: 30px;
+	justify-content: space-between;
+	@media #{$lg,$md,$sm,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.tz-whyc4-img-wrap {
+	width: 100%;
+	max-width: 760px;
+	padding-bottom: 85px;
+	.tz-whyc4-img {
+		border-radius: 15px;
+		@media #{$xs} {
+			max-width: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+.tz-whyc4-txt {
+	right: 0;
+	bottom: 0;
+	padding: 50px;
+	position: absolute;
+	border-radius: 15px;
+	background-color: var(--tz-prime-c);
+	@media #{$xs} {
+		margin-top: 30px;
+		position: static;
+	}
+	@media #{$xxs} {
+		padding: 30px 20px;
+	}
+}
+.tz-whyc4-item {
+	gap: 20px;
+	margin-bottom: 60px;
+	@media #{$xs} {
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.item-icon {
+		width: 75px;
+		height: 75px;
+		border-radius: 100%;
+		background-color: #fff;
+	}
+	.item-text {
+		max-width: 290px;
+		h3 {
+			color: #fff;
+			font-size: 22px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		p {
+			color: #fff;
+		}
+	}
+}
+.tz-whyc4-skill {
+	.skill-set-percent {
+		width: 100%;
+		@media #{$sm,$xs} {
+			margin: 0 auto;
+		}
+	}
+	.skill-set-percent h4 {
+		z-index: 1;
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+	.skill-set-percent .progress {
+		height: 16px;
+		border-radius: 0;
+		margin-bottom: 35px;
+		overflow: visible;
+		display: block;
+		position: relative;
+		border-radius: 100px;
+		border: 1px solid #E6E2F3;
+		background-color: transparent;
+	}
+	.skill-set-percent .progress span {
+		top: -28px;
+		right: 0;
+		font-size: 16px;
+		font-weight: 600;
+		position: absolute;
+		color: var(--tz-title-color);
+	}
+	.skill-set-percent .progress-bar {
+		top: 4px;
+		width: 0;
+		left: 5px;
+		float: left;
+		height: 6px;
+		position: relative;
+		border-radius: 30px;
+		transition: 1s all ease-in-out;
+		background-color: var(--tz-prime-c);
+		-webkit-transition: 1s all ease-in-out;
+	}
+}

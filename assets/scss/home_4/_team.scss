@@ -1,0 +1,35 @@
+.tz-team4-item {
+	overflow: hidden;
+	border-radius: 15px;
+	padding-bottom: 1px;
+	background-color: #F2F3F4;
+	.item-img {
+		overflow: hidden;
+		border-radius: 15px;
+	}
+	.item-text {
+		margin: 10px;
+		border-radius: 15px;
+		background-color: #fff;
+		padding: 26px 30px 20px;
+		h3 {
+			font-size: 24px;
+			font-weight: 700;
+			padding-bottom: 5px;
+		}
+		span {
+			font-weight: 500;
+		}
+		.item-social {
+			margin-top: 10px;
+			padding-top: 10px;
+			border-top: 1px solid #EAEBED;
+			a {
+				margin-right: 25px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
