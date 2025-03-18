@@ -456,6 +456,59 @@ Last change:    00/00/00
 
 		});
 	}
+// Project Slider	
+	if ($('.tz-project4-slider').length > 0 ) {
+		var slider = new Swiper('.tz-project4-slider', {
+			slidesPerView: 5,
+			loop: true,
+			centeredSlides: true,
+			autoplay: {
+				enabled: true,
+				delay: 2000
+			},
+			speed: 1000,
+			on: {
+				slideChange: function () {
+					var activeIndex = this.activeIndex;
+					var realIndex = this.slides[activeIndex].getAttribute('data-swiper-slide-index'); 
+					$('.swiper-slide').removeClass('swiper-slide-nth-prev-2 swiper-slide-nth-next-2');
+					$('.swiper-slide[data-swiper-slide-index="'+realIndex+'"]').prev().prev().addClass('swiper-slide-nth-prev-2');
+					$('.swiper-slide[data-swiper-slide-index="'+realIndex+'"]').next().next().addClass('swiper-slide-nth-next-2');
+				},
+			},
+			breakpoints: {
+				'1600': {
+					slidesPerView: 5,
+				},
+				'1200': {
+					slidesPerView: 4,
+					spaceBetween: 40,
+				},
+				'992': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'991': {
+					slidesPerView: 2,
+					centeredSlides: false,
+				},
+				'768': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					centeredSlides: false,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					centeredSlides: false,
+				},
+				'0': {
+					slidesPerView: 1,
+					centeredSlides: false,
+				},
+			},
+		});
+	};
 // Team Slider
 	if($(".tz-team2-slide").length) {
 		var swiper3 = new Swiper(".tz-team2-slide", {
