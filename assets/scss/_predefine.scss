@@ -254,10 +254,13 @@ a {
 		font-weight: 800;
 		position: absolute;
 		display: inline-block;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0) 141.43%);
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 141.43%);
 		-webkit-background-clip: text;
-		-webkit-text-stroke: 2px transparent;
-		color: rgba(255, 2555, 255, 1);
+		-webkit-text-stroke: 2px #0000000d;
+		color: transparent; 
+		@media #{$md,$sm,$xs} {
+			display: none;
+		}     
 	}
 	.subtitle {
 		font-size: 14px;
@@ -284,10 +287,6 @@ a {
 		.watermark {
 			left: 0;
 			right: 0;
-			background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 141.43%);
-			-webkit-background-clip: text;
-			-webkit-text-stroke: 2px transparent;
-			color: rgba(255, 2555, 255, .3);
 		}
 		p {
 			margin: 0 auto;

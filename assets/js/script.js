@@ -190,9 +190,9 @@ Last change:    00/00/00
 						fadeEffect: {
 							crossFade: true
 						},
-						// autoplay: {
-						// 	delay: 4000,
-						// },
+						autoplay: {
+							delay: 4000,
+						},
 						pagination: {
 							el: ".tz-hs4-pagi",
 							clickable: true,
@@ -304,6 +304,44 @@ Last change:    00/00/00
 				stagger: 0.2,
 			});
 			
+		});
+	}
+	if($(".tz-sub-head").length) {
+		var tzSplit = $(".tz-sub-head");
+		if(tzSplit.length == 0) return; gsap.registerPlugin(SplitText); tzSplit.each(function(index, el) {
+
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line",
+			});
+
+			let delayValue = $(el).attr("data-split-delay") || "0s";
+			delayValue = parseFloat(delayValue) || 0; 
+
+			if( $(el).hasClass('tz-sub-head') ){
+				gsap.set(el.split.chars, {
+					yPercent: 100 , 
+				});
+			}
+
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 86%",
+					toggleActions: 'play none none reverse',
+				},
+				opacity: 1,
+				yPercent: 0,
+				xPercent: 0,
+				duration: .8,
+				ease: "back.out(2)",
+				stagger: {
+					amount: .7, 
+					from: "random", 
+				},
+				delay: delayValue, 
+			});
+
 		});
 	}
 // Circle Animation
@@ -667,6 +705,40 @@ Last change:    00/00/00
 		tlcta
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 1, scale: 1, yPercent: "50"}, {opacity: 1, yPercent: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .left_move').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1,
+				end: "top 40%",
+				start: "top 100%",
+				ease: "Back.easeOut",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: .8, xPercent: "100"}, {opacity: 1, scale: 1, xPercent: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .right_move').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1,
+				end: "top 40%",
+				start: "top 100%",
+				ease: "Back.easeOut",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: .8, xPercent: "-100"}, {opacity: 1, scale: 1, xPercent: 0, duration: 1, immediateRender: false})
 	});
 	const TopView = document.querySelectorAll('.top_view_2');
 
@@ -1056,5 +1128,8 @@ Last change:    00/00/00
 			ease: "none",
 		});
 	});
+
+
+
 
 })(jQuery);

@@ -350,6 +350,9 @@
 	}
 	.newslatter-widget3 {
 		width: 325px;
+		@media #{$xxs} {
+			width: 100%;
+		}
 		p {
 			color: #B0B2B7;
 			padding-bottom: 30px;
@@ -374,11 +377,17 @@
 				right: 0;
 				color: #fff;
 				height: 50px;
+				border: none;
 				font-weight: 700;
 				padding: 0px 25px;
 				border-radius: 4px;
 				position: absolute;
+				transition: all 300ms ease-in-out;
 				background-color: var(--tz-prime-c);
+				&:hover {
+					color: #000;
+					background-color: #fff;
+				}
 			}
 		}
 	}
@@ -526,6 +535,7 @@
 	}
 }
 .tz-footer-cta-wrap {
+	gap: 15px;
 	padding-top: 40px; 
 	padding-bottom: 40px;
 	border-top: 1px solid #21263D ;
@@ -552,6 +562,11 @@
 			color: #fff;
 			display: block;
 			max-width: 230px;
+		}
+	}
+	&:hover {
+		.item-icon {
+			animation: swing 2s ease infinite;
 		}
 	}
 }

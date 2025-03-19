@@ -8,7 +8,11 @@
 	box-shadow: 0px 4px 50px 0px #0000001A;
 	.item-img-meta {
 		.item-img {
-
+			overflow: hidden;
+			img {
+				transform: scale(1.1);
+				transition: all 500ms ease-in-out;
+			}
 		}
 		.item-meta {
 			bottom: 0;
@@ -31,6 +35,9 @@
 					position: absolute;
 					border-right: 31px solid transparent;
 					border-bottom: 47px solid var(--tz-prime-c);
+					@media #{$lg,$md,$sm,$xs} {
+						display: none;
+					}
 				}
 				span {
 					font-size: 20px;
@@ -61,6 +68,15 @@
 		.tz-btn-1 {
 			a {
 				padding: 10px 25px;
+			}
+		}
+	}
+	&:hover {
+		.item-img-meta { 
+			.item-img {
+				img {
+					transform: scale(1);
+				}
 			}
 		}
 	}

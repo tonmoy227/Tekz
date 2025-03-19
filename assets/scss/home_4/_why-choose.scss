@@ -68,6 +68,13 @@
 			color: #fff;
 		}
 	}
+	&:hover {
+		.item-icon {
+			img,i {
+				animation: flip 1s;
+			}
+		}
+	}
 }
 .tz-whyc4-skill {
 	.skill-set-percent {

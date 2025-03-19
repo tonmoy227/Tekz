@@ -1,6 +1,8 @@
 .tz-sponsor-content {
+	margin: 0 auto;
 	overflow: hidden;
 	display: flow-root;
+	max-width: 1920px;
 }
 .tz-sponsor-sec {
 	&:is(.ver_2) {

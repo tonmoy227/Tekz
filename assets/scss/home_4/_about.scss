@@ -146,6 +146,13 @@
 			}
 			i {
 				margin-left: 5px;
+				transition: all 300ms ease-in-out;
+			}
+			&:hover {
+				letter-spacing: 1px;
+				i {
+					margin-left: 8px;
+				}
 			}
 		}
 	}

@@ -610,8 +610,10 @@
 		}
 	}
 	&:is(.header_style_four) {
-		background-color: #fff;
+		margin: 0 auto;
+		max-width: 1920px;
 		padding-bottom: 8px;
+		background-color: #fff;
 		@media #{$xl,$lg,$md,$sm,$xs} {
 			padding-bottom: 0;
 		}
@@ -761,6 +763,10 @@
 						white-space: nowrap;
 						background-color: #fff;
 						color: var(--tz-prime-c);
+						&:hover {
+							color: #fff;
+							background-color: #000;
+						}
 						@media #{$xl,$lg,$md,$sm,$xs} {
 							color: #fff;
 							padding: 16px 30px;

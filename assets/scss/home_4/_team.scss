@@ -1,11 +1,21 @@
+.tz-team4-sec {
+	overflow: hidden;
+}
 .tz-team4-item {
+	margin: 0 auto;
+	max-width: 331px;
 	overflow: hidden;
 	border-radius: 15px;
 	padding-bottom: 1px;
+	margin-bottom: 30px;
 	background-color: #F2F3F4;
 	.item-img {
 		overflow: hidden;
+		position: relative;
 		border-radius: 15px;
+		img {
+			transition: all 500ms ease-in-out;
+		}
 	}
 	.item-text {
 		margin: 10px;
@@ -26,9 +36,23 @@
 			border-top: 1px solid #EAEBED;
 			a {
 				margin-right: 25px;
+				@media #{$lg} {
+					margin-right: 15px;
+				}
 				&:last-child {
 					margin-right: 0;
 				}
+				&:hover {
+					color: var(--tz-prime-c);
+				}
+			}
+		}
+	}
+	&:hover {
+		.item-img { 
+			img {
+				filter: grayscale(1);
+				transform: scale(1.1);
 			}
 		}
 	}
