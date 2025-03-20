@@ -1,0 +1,70 @@
+.tz-about5-content {
+	gap: 30px 40px;
+	justify-content: space-between;
+}
+.tz-about5-img-wrap {
+	max-width: 480px;
+	&:before {
+		top: 0;
+		left: 0;
+		width: 175px;
+		content: '';
+		height: 158px;
+		position: absolute;
+		background-color: #fff;
+		clip-path: polygon( 0% 9.036%,0% 9.036%,0.107% 7.57%,0.418% 6.18%,0.915% 4.884%,1.581% 3.7%,2.401% 2.647%,3.356% 1.743%,4.43% 1.009%,5.606% 0.461%,6.867% 0.118%,8.197% 0%,55.464% 0%,64.208% 0%,99.727% 0%,86.396% 0%,86.396% 0%,85.06% 0.119%,83.794% 0.465%,82.614% 1.018%,81.537% 1.759%,80.58% 2.669%,79.761% 3.73%,79.096% 4.922%,78.603% 6.227%,78.298% 7.626%,78.199% 9.099%,78.631% 77.648%,78.631% 77.648%,78.532% 79.122%,78.228% 80.52%,77.734% 81.825%,77.07% 83.017%,76.251% 84.078%,75.294% 84.989%,74.217% 85.729%,73.037% 86.282%,71.77% 86.628%,70.434% 86.747%,8.197% 86.747%,8.197% 86.747%,6.867% 86.865%,5.606% 87.208%,4.43% 87.756%,3.356% 88.49%,2.401% 89.394%,1.581% 90.447%,0.915% 91.631%,0.418% 92.927%,0.107% 94.317%,0% 95.783%,0% 99.699%,0% 9.036% );
+	}
+	.item-img {
+		overflow: hidden;
+		border-radius: 15px;
+		display: inline-block;
+	}
+	.item-exp {
+		top: 0;
+		left: 0;
+		width: 128px;
+		height: 128px;
+		position: absolute;
+		border-radius: 20px;
+		background-color: var(--tz-prime-c);
+
+		.item-inner {
+			h4 {
+				color: #fff;
+				font-size: 40px;
+				font-weight: 700;
+			}
+			p {
+				color: #fff;
+				font-size: 14px;
+				max-width: 88px;
+				font-weight: 700;
+			}
+		}
+	}
+	.item-play {
+		right: -45px;
+		bottom: 58px;
+		width: 120px;
+		height: 120px;
+		border-radius: 30px;
+		position: absolute;
+		border: 10px solid #fff;
+		background-color: var(--tz-prime-c);
+		a {
+			color: #fff;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			font-size: 20px;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+.tz-about5-text-wrap {
+	max-width: 675px;
+	.tz-section-title {
+		max-width: 590px;
+	}
+}
