@@ -40,51 +40,6 @@
 			display: none;
 		}
 	}
-	.ab_video_play_btn {
-		top: 50%;
-		right: 210px;
-		width: 100px;
-		height: 100px;
-		line-height: 100px;
-		position: absolute;
-		border-radius: 100%;
-		background-color: #fff;
-		color: var(--tz-prime-c);
-		transform: translateY(-50%);
-		@media #{$lg,$md,$sm,$xs} {
-			z-index: 2;
-			position: static;
-			margin-bottom: 60px;
-			transform: translateY(0);
-		}
-		a {
-			width: 100%;
-			height: 100%;
-			font-size: 30px;
-		}
-		.video_btn_border {
-			top: 0;
-			left: 0;
-			opacity: 0;
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			border-radius: 100%;
-			border: 2px solid #FFFFFF78;
-			animation-play-state: running;
-			-webkit-animation-play-state: running;
-			-webkit-animation: border_animation 3.9s linear 0s infinite;
-			animation: border_animation 3.9s linear 0s infinite;
-			&.border_wrap-2 {
-				-webkit-animation-delay: 1.3s;
-				animation-delay: 1.3s;
-			}
-			&.border_wrap-3 {
-				-webkit-animation-delay: 2.6s;
-				animation-delay: 2.6s; 
-			}
-		}
-	}
 	.ab-bg2 {
 		top: 0;
 		left: 0;
@@ -124,6 +79,51 @@
 		a {
 			color: var(--tz-prime-c);
 			background-color: #fff;
+		}
+	}
+}
+.ab_video_play_btn {
+	top: 50%;
+	right: 210px;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	position: absolute;
+	border-radius: 100%;
+	background-color: #fff;
+	color: var(--tz-prime-c);
+	transform: translateY(-50%);
+	@media #{$lg,$md,$sm,$xs} {
+		z-index: 2;
+		position: static;
+		margin-bottom: 60px;
+		transform: translateY(0);
+	}
+	a {
+		width: 100%;
+		height: 100%;
+		font-size: 30px;
+	}
+	.video_btn_border {
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		border-radius: 100%;
+		border: 2px solid #FFFFFF78;
+		animation-play-state: running;
+		-webkit-animation-play-state: running;
+		-webkit-animation: border_animation 3.9s linear 0s infinite;
+		animation: border_animation 3.9s linear 0s infinite;
+		&.border_wrap-2 {
+			-webkit-animation-delay: 1.3s;
+			animation-delay: 1.3s;
+		}
+		&.border_wrap-3 {
+			-webkit-animation-delay: 2.6s;
+			animation-delay: 2.6s; 
 		}
 	}
 }

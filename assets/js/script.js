@@ -656,6 +656,44 @@ Last change:    00/00/00
 
 		});
 	}
+
+// Service Slider	
+	if($(".tz-ser5-slider").length) {
+		var swiper3 = new Swiper(".tz-ser5-slider", {
+			speed: 1000,
+			loop: true,
+			spaceBetween: 30,
+			centeredSlides: true,
+			navigation: {
+				nextEl: ".tz-ser5-next",
+				prevEl: ".tz-ser5-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+			},
+
+		});
+	}
 // Animation
 	gsap.utils.toArray(' .left_view').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
