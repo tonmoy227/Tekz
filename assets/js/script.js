@@ -443,6 +443,9 @@ Last change:    00/00/00
 		var swiper3 = new Swiper(".tz-testi5-slider", {
 			speed: 1000,
 			spaceBetween: 20,
+			autoplay: {
+				delay: 3000,
+			},
 			direction: "vertical",
 			breakpoints: {
 				0: {
@@ -470,6 +473,20 @@ Last change:    00/00/00
 
 		});
 	}
+	if($(".tz-proj5-slider").length) {
+		var testSlider = new Swiper(".tz-proj5-slider", {
+			loop: true,
+			speed: 1000,
+			spaceBetween: 30,
+			fadeEffect: {
+				crossFade: true
+			},
+			navigation: {
+				nextEl: ".tz-proj5-next",
+				prevEl: ".tz-proj5-prev",
+			},
+		});
+	};
 	if ($(".progress-bar").length) {
 		var $progress_bar = $('.progress-bar');
 		$progress_bar.appear();

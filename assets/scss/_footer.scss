@@ -536,8 +536,6 @@
 }
 .tz-footer-cta-wrap {
 	gap: 15px;
-	padding-top: 40px; 
-	padding-bottom: 40px;
 	border-top: 1px solid #21263D ;
 }
 .tz-ft-cta-item {
@@ -567,6 +565,42 @@
 	&:hover {
 		.item-icon {
 			animation: swing 2s ease infinite;
+		}
+	}
+}
+.tz-footer-menu-area {
+	overflow: hidden;
+	border-radius: 15px;
+	background: #FFFFFF12;
+	border: 1px solid #FFFFFF12;
+	backdrop-filter: blur(80px);
+	.tz-footer-menu-wrap {
+		border-radius: 0;
+		backdrop-filter: none;
+		background-color: var(--tz-prime-c);
+	}
+}
+.tz-footer-desc-social {
+	gap: 15px 50px;
+	padding: 46px 40px;
+	.item-desc {
+		color: #989898;
+		max-width: 655px;
+	}
+	.footer-social {
+		gap: 8px;
+		a {
+			width: 50px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			border-radius: 100%;
+			justify-content: center;
+			border:  1px solid #393D61;
+			&:hover {
+				color: #fff;
+				background-color: var(--tz-prime-c);
+			}
 		}
 	}
 }
