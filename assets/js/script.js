@@ -439,6 +439,37 @@ Last change:    00/00/00
 
 		});
 	}
+	if($(".tz-testi5-slider").length) {
+		var swiper3 = new Swiper(".tz-testi5-slider", {
+			speed: 1000,
+			spaceBetween: 20,
+			direction: "vertical",
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 2,
+				},
+				1400: {
+					slidesPerView: 2,
+				},
+				1600: {
+					slidesPerView: 2,
+				},
+			},
+
+		});
+	}
 	if ($(".progress-bar").length) {
 		var $progress_bar = $('.progress-bar');
 		$progress_bar.appear();
@@ -451,6 +482,9 @@ Last change:    00/00/00
 
 		});
 	};
+	$('#workp5tab .nav-link').hover(function() {
+		$(this).tab('show');
+	});
 // Service Slider
 	if($(".tz-pro2-slide").length) {
 		var swiper3 = new Swiper(".tz-pro2-slide", {

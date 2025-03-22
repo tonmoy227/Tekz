@@ -1,0 +1,50 @@
+.tz-testi5-slider-area {
+	padding: 20px;
+	height: 520px;
+	overflow: hidden;
+	max-width: 740px;
+	border-radius: 15px;
+	background-color: #05091A;
+}
+.tz-testi5-slider {
+	height: 520px;
+}
+.tz-testi5-item {
+	overflow: hidden;
+	border-radius: 15px;
+	border: 1px solid #FFFFFF14;
+	.item-desc {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+		padding: 25px 30px;
+	}
+	.item-author-rate {
+		padding: 20px;
+		background-color: #1E2030;
+		.item-author {
+			gap: 20px;
+			.item-img {
+				width: 60px;
+				height: 60px;
+				overflow: hidden;
+				border-radius: 100%;
+			}
+			.item-text {
+				h3 {
+					color: #fff;
+					font-size: 20px;
+					font-weight: 700;
+				}
+				span {
+					font-size: 13px;
+					color: rgba(255, 255, 255, .7);
+				}
+			}
+		}
+		li {
+			color: #FFB400;
+			margin-left: 3px;
+		}
+	}
+}

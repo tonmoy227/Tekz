@@ -4514,6 +4514,12 @@ a:hover, a:focus {
 .tz-sponsor-item:is(.ver_3) .item-img {
   height: 120px;
 }
+.tz-sponsor-item:is(.ver_4) {
+  bbackground: linear-gradient(180deg, #EDF0F4 0%, rgba(237, 240, 244, 0) 100%);
+}
+.tz-sponsor-item:is(.ver_4) .item-img {
+  height: 90px;
+}
 
 .tz-ab3-btm-1 {
   overflow: hidden;
@@ -9952,6 +9958,356 @@ a:hover, a:focus {
           justify-content: center;
   color: var(--tz-prime-c);
   background-color: #F6F6F6;
+}
+
+/*---------------------------------------------------- */
+/*Work Process Section*/
+/*----------------------------------------------------*/
+.tz-workp5-sec .tz-workp5-shape1 {
+  right: 0;
+  top: -40%;
+  z-index: -1;
+}
+.tz-workp5-sec .tz-workp5-shape2 {
+  top: 220px;
+  left: -100px;
+}
+.tz-workp5-sec .tz-section-title {
+  margin: 0 auto;
+  max-width: 635px;
+}
+
+.tz-workp5-content {
+  margin-top: 65px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 12px 31px 0px rgba(31, 23, 55, 0.1607843137);
+          box-shadow: 0px 12px 31px 0px rgba(31, 23, 55, 0.1607843137);
+}
+
+.tz-workp5-btn-wrap .nav-item:last-child .tz-workp5-btn {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.tz-workp5-btn {
+  position: relative;
+  margin-bottom: 35px;
+  padding-bottom: 35px;
+}
+.tz-workp5-btn:before {
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  content: "";
+  height: 1px;
+  position: absolute;
+  background-color: #EDEDED;
+}
+.tz-workp5-btn .item-icon-text {
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tz-workp5-btn .item-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background-color: #EEE9FC;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+.tz-workp5-btn .item-icon svg {
+  fill: var(--tz-prime-c);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.tz-workp5-btn .item-text {
+  max-width: 420px;
+}
+.tz-workp5-btn .item-text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.tz-workp5-btn .item-text p {
+  color: #74787C;
+}
+.tz-workp5-btn .item-serial {
+  top: 50%;
+  z-index: 2;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  right: -65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  border-radius: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: var(--tz-prime-c);
+}
+
+.tz-workp5-content .nav-tabs .nav-link {
+  padding: 0;
+}
+
+.tz-workp5-btn-wrap {
+  width: 50%;
+  z-index: 2;
+  padding: 40px;
+  position: relative;
+}
+
+.tz-workp5-tab-content {
+  overflow: hidden;
+}
+.tz-workp5-tab-content .tab-content {
+  height: 100%;
+}
+.tz-workp5-tab-content .tab-content .tab-pane {
+  height: 100%;
+}
+
+.tz-workp5-tab-img {
+  height: 100%;
+}
+.tz-workp5-tab-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.nav-link:is(.active) .tz-workp5-btn .item-icon {
+  background-color: var(--tz-prime-c);
+}
+.nav-link:is(.active) .tz-workp5-btn .item-icon svg {
+  fill: #fff;
+}
+
+/*---------------------------------------------------- */
+/*Contact Section*/
+/*----------------------------------------------------*/
+.tz-contact5-sec {
+  margin: 0px 120px;
+}
+
+.tz-contact5-content {
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 115px 0px 120px;
+  background-color: #1F2023;
+}
+.tz-contact5-content .tz-cnt5-shape1 {
+  top: -15%;
+  right: -5%;
+  z-index: -1;
+}
+.tz-contact5-content .tz-cnt5-shape2 {
+  left: -15%;
+  bottom: -15%;
+  z-index: -1;
+}
+
+.tz-contact5-form-wrap {
+  margin: 0 auto;
+  max-width: 850px;
+}
+.tz-contact5-form-wrap .tz-section-title {
+  margin: 0 auto;
+  max-width: 475px;
+}
+.tz-contact5-form-wrap .tz-section-title .subtitle, .tz-contact5-form-wrap .tz-section-title .sec_title {
+  color: #fff;
+}
+
+.tz-contact5-form {
+  padding: 60px;
+  border-radius: 15px;
+  background-color: #1F2023;
+  border: 1px solid var(--tz-prime-c);
+}
+.tz-contact5-form input, .tz-contact5-form textarea {
+  width: 100%;
+  height: 55px;
+  border: none;
+  padding-left: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.tz-contact5-form input::-webkit-input-placeholder, .tz-contact5-form textarea::-webkit-input-placeholder {
+  color: var(--tz-title-color);
+}
+.tz-contact5-form input::-moz-placeholder, .tz-contact5-form textarea::-moz-placeholder {
+  color: var(--tz-title-color);
+}
+.tz-contact5-form input:-ms-input-placeholder, .tz-contact5-form textarea:-ms-input-placeholder {
+  color: var(--tz-title-color);
+}
+.tz-contact5-form input::-ms-input-placeholder, .tz-contact5-form textarea::-ms-input-placeholder {
+  color: var(--tz-title-color);
+}
+.tz-contact5-form input::placeholder, .tz-contact5-form textarea::placeholder {
+  color: var(--tz-title-color);
+}
+.tz-contact5-form textarea {
+  height: 150px;
+  padding-top: 15px;
+}
+.tz-contact5-form button {
+  color: #fff;
+  width: 100%;
+  border: none;
+  height: 55px;
+  border-radius: 8px;
+  background-color: var(--tz-prime-c);
+}
+
+/*---------------------------------------------------- */
+/*Blog Section*/
+/*----------------------------------------------------*/
+.tz-blog5-sec {
+  z-index: 1;
+  overflow: hidden;
+}
+.tz-blog5-sec .tz-blog5-bg {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.tz-blog5-sec .tz-blog5-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tz-blog5-sec .tz-section-title {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.tz-blog5-sec .tz-section-title .subtitle, .tz-blog5-sec .tz-section-title .sec_title {
+  color: #fff;
+}
+
+.tz-blog5-item {
+  border-radius: 15px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+.tz-blog5-item .item-img {
+  width: 100%;
+  height: 200px;
+}
+.tz-blog5-item .item-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tz-blog5-item .item-text {
+  padding: 25px 30px 30px;
+}
+.tz-blog5-item .item-text .item-meta {
+  margin-bottom: 12px;
+}
+.tz-blog5-item .item-text .item-meta a {
+  margin-right: 20px;
+}
+.tz-blog5-item .item-text .item-meta a:last-child {
+  margin-right: 0;
+}
+.tz-blog5-item .item-text .item-meta i {
+  margin-right: 5px;
+  color: var(--tz-prime-c);
+}
+.tz-blog5-item .item-text .blog_title {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+.tz-blog5-item .item-text .read_more {
+  color: #F0EFFF;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 23px;
+  border-radius: 100px;
+  background-color: var(--tz-prime-c);
+}
+.tz-blog5-item .item-text .read_more:hover {
+  color: #fff;
+  background-color: var(--tz-title-color);
+}
+
+/*---------------------------------------------------- */
+/*Testimonial Section*/
+/*----------------------------------------------------*/
+.tz-testi5-slider-area {
+  padding: 20px;
+  height: 520px;
+  overflow: hidden;
+  max-width: 740px;
+  border-radius: 15px;
+  background-color: #05091A;
+}
+
+.tz-testi5-slider {
+  height: 520px;
+}
+
+.tz-testi5-item {
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.0784313725);
+}
+.tz-testi5-item .item-desc {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 25px 30px;
+}
+.tz-testi5-item .item-author-rate {
+  padding: 20px;
+  background-color: #1E2030;
+}
+.tz-testi5-item .item-author-rate .item-author {
+  gap: 20px;
+}
+.tz-testi5-item .item-author-rate .item-author .item-img {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.tz-testi5-item .item-author-rate .item-author .item-text h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.tz-testi5-item .item-author-rate .item-author .item-text span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.tz-testi5-item .item-author-rate li {
+  color: #FFB400;
+  margin-left: 3px;
 }
 
 /*---------------------------------------------------- */

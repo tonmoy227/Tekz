@@ -1,0 +1,129 @@
+.tz-workp5-sec {
+	.tz-workp5-shape1 {
+		right: 0;
+		top: -40%;
+		z-index: -1;
+	}
+	.tz-workp5-shape2 {
+		top: 220px;
+		left: -100px;
+	}
+	.tz-section-title {
+		margin: 0 auto;
+		max-width: 635px;
+	}
+}
+.tz-workp5-content {
+	margin-top: 65px;
+	overflow: hidden;
+	border-radius: 15px;
+	background-color: #fff;
+	box-shadow: 0px 12px 31px 0px #1F173729;
+}
+.tz-workp5-btn-wrap {
+	.nav-item {
+		&:last-child {
+			.tz-workp5-btn { 
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+.tz-workp5-btn {
+	position: relative;
+	margin-bottom: 35px;
+	padding-bottom: 35px;
+	&:before {
+		left: 0;
+		bottom: 0;
+		width: 90%;
+		content: '';
+		height: 1px;;
+		position: absolute;
+		background-color: #EDEDED;
+	}
+	.item-icon-text {
+		gap: 20px;
+		display: flex;
+	}
+	.item-icon {
+		width: 80px;
+		height: 80px;
+		border-radius: 15px;
+		background-color: #EEE9FC;
+		transition: all 400ms ease-in-out;
+		svg {
+			fill: var(--tz-prime-c);
+			transition: all 500ms ease-in-out;
+		}
+	}
+	.item-text {
+		max-width: 420px;
+		h3 {
+			font-size: 22px;
+			font-weight: 700;
+			padding-bottom: 10px;
+		}
+		p {
+			color: #74787C;
+		}
+	}
+	.item-serial {
+		top: 50%;
+		z-index: 2;
+		color: #fff;
+		width: 50px;
+		height: 50px;
+		right: -65px;
+		display: flex;
+		font-size: 18px;
+		font-weight: 700;
+		position: absolute;
+		border-radius: 100%;
+		align-items: center;
+		justify-content: center;
+		transform: translateY(-50%);
+		background-color: var(--tz-prime-c);
+	}
+}
+.tz-workp5-content {
+	.nav-tabs .nav-link {
+		padding: 0;
+	}
+}
+.tz-workp5-btn-wrap {
+	width: 50%;
+	z-index: 2;
+	padding: 40px;
+	position: relative;
+}
+.tz-workp5-tab-content {
+	overflow: hidden;
+	.tab-content {
+		height: 100%;
+		.tab-pane {
+			height: 100%;
+		}
+	}
+}
+.tz-workp5-tab-img {
+	height: 100%;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.nav-link {
+	&:is(.active) {
+		.tz-workp5-btn { 
+			.item-icon {
+				background-color: var(--tz-prime-c);
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}

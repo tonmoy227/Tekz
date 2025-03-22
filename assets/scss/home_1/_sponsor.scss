@@ -39,6 +39,12 @@
 			height: 120px;
 		}
 	}
+	&:is(.ver_4) {
+		bbackground: linear-gradient(180deg, #EDF0F4 0%, rgba(237, 240, 244, 0) 100%);
+		.item-img {
+			height: 90px;
+		}
+	}
 }
 .tz-ab3-btm-1 {
 	overflow: hidden;

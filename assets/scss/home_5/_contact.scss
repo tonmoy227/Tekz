@@ -1,0 +1,61 @@
+.tz-contact5-sec {
+	margin: 0px 120px;
+}
+.tz-contact5-content {
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 15px;
+	padding: 115px 0px 120px;
+	background-color: #1F2023;
+	.tz-cnt5-shape1 {
+		top: -15%;
+		right: -5%;
+		z-index: -1;
+	}
+	.tz-cnt5-shape2 {
+		left: -15%;
+		bottom: -15%;
+		z-index: -1;
+	}
+}
+.tz-contact5-form-wrap {
+	margin: 0 auto;
+	max-width: 850px;
+	.tz-section-title {
+		margin: 0 auto;
+		max-width: 475px;
+		.subtitle, .sec_title {
+			color: #fff;
+		}
+	}
+}
+.tz-contact5-form {
+	padding: 60px;
+	border-radius: 15px;
+	background-color: #1F2023;
+	border:  1px solid var(--tz-prime-c);
+	input,textarea {
+		width: 100%;
+		height: 55px;
+		border: none;
+		padding-left: 20px;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		background-color: #fff;
+		&::placeholder {
+			color: var(--tz-title-color);
+		}
+	}
+	textarea {
+		height: 150px;
+		padding-top: 15px;
+	}
+	button {
+		color: #fff;
+		width: 100%;
+		border: none;
+		height: 55px;
+		border-radius: 8px;
+		background-color: var(--tz-prime-c);
+	}
+}
