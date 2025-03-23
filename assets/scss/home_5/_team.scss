@@ -23,12 +23,16 @@
 .tz-tm5-item {
 	gap: 25px;
 	padding: 15px;
+	flex-wrap: wrap;
 	margin-bottom: 30px;
 	border-radius: 15px;
 	background-color: #fff;
 	.item-img {
 		overflow: hidden;
 		border-radius: 15px;
+		img {
+			transition: all 300ms ease-in-out;
+		}
 	}
 	.item-text {
 		h3 {
@@ -50,6 +54,17 @@
 			justify-content: center;
 			color: var(--tz-prime-c);
 			background-color: #F6F6F6;
+			&:hover {
+				color: #fff;
+				background-color: var(--tz-prime-c);
+			}
+		}
+	}
+	&:hover {
+		.item-img { 
+			img {
+				transform: scale(1.1);
+			}
 		}
 	}
 }

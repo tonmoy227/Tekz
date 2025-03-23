@@ -7,10 +7,12 @@
 	.tz-workp5-shape2 {
 		top: 220px;
 		left: -100px;
+		z-index: -1;
 	}
 	.tz-section-title {
 		margin: 0 auto;
 		max-width: 635px;
+		z-index: -1;
 	}
 }
 .tz-workp5-content {
@@ -19,6 +21,10 @@
 	border-radius: 15px;
 	background-color: #fff;
 	box-shadow: 0px 12px 31px 0px #1F173729;
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .tz-workp5-btn-wrap {
 	.nav-item {
@@ -46,6 +52,9 @@
 	.item-icon-text {
 		gap: 20px;
 		display: flex;
+		@media #{$xs} {
+			flex-wrap: wrap;
+		}
 	}
 	.item-icon {
 		width: 80px;
@@ -60,6 +69,9 @@
 	}
 	.item-text {
 		max-width: 420px;
+		@media #{$xl,$lg,$md,$sm,$xs} {
+			max-width: 370px;
+		}
 		h3 {
 			font-size: 22px;
 			font-weight: 700;
@@ -85,6 +97,12 @@
 		justify-content: center;
 		transform: translateY(-50%);
 		background-color: var(--tz-prime-c);
+		@media #{$lg,$md,$sm,$xs} {
+			right: 20px;
+		}
+		@media #{$xs} {
+			display: none;
+		}
 	}
 }
 .tz-workp5-content {
@@ -97,6 +115,9 @@
 	z-index: 2;
 	padding: 40px;
 	position: relative;
+	@media #{$lg,$md,$sm,$xs} {
+		width: 100%;
+	}
 }
 .tz-workp5-tab-content {
 	overflow: hidden;

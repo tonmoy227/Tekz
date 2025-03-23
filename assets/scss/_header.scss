@@ -821,9 +821,15 @@
 		.tz-header-top {
 			padding: 0px 40px;
 			border-radius: 10px;
+			@media #{$md,$sm,$xs} {
+				display: none;
+			}
 		}
 		.tz-top-cta-area {
 			gap: 80px;
+			@media #{$lg,$md,$sm,$xs} {
+				gap: 50px;
+			}
 		}
 		.tz-header-top {
 			background-color: #fff;	
@@ -840,6 +846,9 @@
 				height: 100%;
 				position: absolute;
 				background-color: #E8E2FC;
+				@media #{$lg,$md,$sm,$xs} {
+					display: none;
+				}
 			}
 			&:last-child {
 				&:before {
@@ -870,6 +879,15 @@
 		.tz-main-navigation-wrap {
 			padding: 5px 30px 0px 5px;
 			background-color: var(--tz-prime-c);
+			@media #{$md,$sm,$xs} {
+				padding: 10px 5px 7px 5px;
+			}
+			.brand-logo {
+				display: none;
+				@media #{$md,$sm,$xs} {
+					display: block;
+				}
+			}
 			.main-navigation {
 				@media #{$md,$sm,$xs} {
 					display: none ;
@@ -902,6 +920,9 @@
 				gap: 10px;
 			}
 			.header-cta-btn {
+				@media #{$xxs} {
+					display: none;
+				}
 				a {
 					font-weight: 600;
 					padding: 8px 25px;
@@ -921,9 +942,6 @@
 					border-radius: 100%;
 					background-color: #fff;
 					transition: all 400ms ease-in-out;
-					@media #{$xl,$lg,$md,$sm,$xs} {
-						background-color: var(--tz-prime-c);
-					}
 					span {
 						width: 14px;
 						height: 2px;
@@ -933,9 +951,6 @@
 						border-radius: 100px;
 						background-color: var(--tz-prime-c);
 						transition: all 400ms ease-in-out;
-						@media #{$xl,$lg,$md,$sm,$xs} {
-							background-color: #fff;
-						}
 					}
 					&:hover {
 						background-color: var(--tz-title-color);
@@ -944,6 +959,9 @@
 						}
 					}
 				}
+			}
+			.tz-mobile-btn-trigger span {
+				background-color: #fff;
 			}
 		}
 	}

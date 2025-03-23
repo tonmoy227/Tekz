@@ -203,6 +203,23 @@ Last change:    00/00/00
 						},
 					});
 				};
+				if($(".tz-hero5-slider").length) {
+					var TZSlider = new Swiper(".tz-hero5-slider", {
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						autoplay: {
+							delay: 4000,
+						},
+						navigation: {
+							prevEl: ".tz-hs-prev5",
+							nextEl: ".tz-hs-next5",
+						},
+					});
+				};
 				var TZHeroCategory = gsap.timeline({
 					scrollTrigger: {
 						trigger: ".tz-hero3-cate-content",
@@ -444,15 +461,21 @@ Last change:    00/00/00
 			speed: 1000,
 			spaceBetween: 20,
 			autoplay: {
-				delay: 3000,
+				delay: 2000,
 			},
 			direction: "vertical",
 			breakpoints: {
 				0: {
 					slidesPerView: 1,
+					direction: "horizontal",
 				},
 				576: {
 					slidesPerView: 1,
+					direction: "horizontal",
+				},
+				767: {
+					slidesPerView: 1,
+					direction: "horizontal",
 				},
 				768: {
 					slidesPerView: 2,
@@ -714,7 +737,6 @@ Last change:    00/00/00
 			speed: 1000,
 			loop: true,
 			spaceBetween: 30,
-			centeredSlides: true,
 			navigation: {
 				nextEl: ".tz-ser5-next",
 				prevEl: ".tz-ser5-prev",
@@ -762,7 +784,22 @@ Last change:    00/00/00
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 1, scale: 1, xPercent: "-100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
 	});
+	gsap.utils.toArray(' .left_view_5').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 20%",
+				start: "top 80%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
 
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: 1, xPercent: "100"}, {opacity: 1, xPercent: 0, duration: 1, immediateRender: false})
+	});
 	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
@@ -969,6 +1006,23 @@ Last change:    00/00/00
 		tlcta
 		.set(el, {transformOrigin: 'bottom bottom'})
 		.from(el, { opacity: 1, yPercent: -100, }, {opacity: 1, yPercent: 0, duration: 1, immediateRender: false})
+	});
+	gsap.utils.toArray(' .zoom_view_4').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".tz-team5-sec",
+				scrub: 2,
+				end: "top -10%",
+				start: "top 50%",
+				ease: "back.out(1.5)",
+				toggleActions: "play none none reverse",
+				markers: false,
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'bottom bottom'})
+		.from(el, { opacity: 1, yPercent: 100, }, {opacity: 1, yPercent: 0, duration: 1, immediateRender: false})
 	});
 	gsap.utils.toArray(' .zoom_view_4').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
