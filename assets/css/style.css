@@ -10921,18 +10921,44 @@ a:hover, a:focus {
   }
 }
 .tz-proj5-item .item-text h3 {
+  opacity: 0;
   color: #fff;
   font-size: 24px;
   font-weight: 700;
   padding-bottom: 8px;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: 800ms cubic-bezier(0.61, -0.63, 0.46, 1.48);
+  transition: 800ms cubic-bezier(0.61, -0.63, 0.46, 1.48);
 }
 .tz-proj5-item .item-text span {
+  opacity: 0;
   color: #fff;
   font-weight: 500;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: 800ms cubic-bezier(0.61, -0.63, 0.46, 1.48);
+  transition: 800ms cubic-bezier(0.61, -0.63, 0.46, 1.48);
 }
 .tz-proj5-item .item-text p {
+  opacity: 0;
   color: #fff;
   margin-bottom: 35px;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: 800ms cubic-bezier(0.61, -0.63, 0.46, 1.48);
+  transition: 800ms cubic-bezier(0.61, -0.63, 0.46, 1.48);
+}
+.tz-proj5-item .item-text .more-btn {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: 800ms cubic-bezier(0.61, -0.63, 0.46, 1.48);
+  transition: 800ms cubic-bezier(0.61, -0.63, 0.46, 1.48);
 }
 .tz-proj5-item .item-text .read_more {
   color: #fff;
@@ -10985,6 +11011,25 @@ a:hover, a:focus {
 .tz-proj5-nav .tz-proj5-next:hover {
   color: #fff;
   background-color: var(--tz-prime-c);
+}
+
+.swiper-slide-active .tz-proj5-item .item-text h3, .swiper-slide-active .tz-proj5-item .item-text span, .swiper-slide-active .tz-proj5-item .item-text p, .swiper-slide-active .tz-proj5-item .item-text .more-btn {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.swiper-slide-active .tz-proj5-item .item-text span {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+.swiper-slide-active .tz-proj5-item .item-text p {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+.swiper-slide-active .tz-proj5-item .item-text .more-btn {
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
 }
 
 /*---------------------------------------------------- */
@@ -11755,6 +11800,13 @@ a:hover, a:focus {
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
   background-color: var(--tz-prime-c);
+}
+.tz-footer-menu-area .tz-footer-menu-wrap .footer-menu li a:hover {
+  color: #000;
+}
+.tz-footer-menu-area .tz-footer-menu-wrap .menu-btn a:hover {
+  color: #fff;
+  background-color: #000;
 }
 
 .tz-footer-desc-social {

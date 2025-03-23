@@ -578,6 +578,19 @@
 		border-radius: 0;
 		backdrop-filter: none;
 		background-color: var(--tz-prime-c);
+		.footer-menu li {
+			a {
+				&:hover {
+					color: #000;;
+				}
+			}
+		}
+		.menu-btn a {
+			&:hover {
+				color: #fff;
+				background-color: #000;
+			}
+		}
 	}
 }
 .tz-footer-desc-social {

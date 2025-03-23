@@ -501,6 +501,7 @@ Last change:    00/00/00
 			loop: true,
 			speed: 1000,
 			spaceBetween: 30,
+			effect: "fade",
 			fadeEffect: {
 				crossFade: true
 			},
