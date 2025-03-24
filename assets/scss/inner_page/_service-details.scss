@@ -1,0 +1,36 @@
+.tz-ser-feed-sec {
+	background-color: #F2F3F4;
+}
+.ser-details-thumb {
+	overflow: hidden;
+	border-radius: 15px;
+	margin-bottom: 30px;
+	display: inline-block;
+	@media #{$xs} {
+		height: 300px;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.ser-details-text {
+	h3 {
+		font-size: 30px;
+		font-weight: 700;
+		padding-bottom: 20px;
+	}
+	p {
+		padding-bottom: 30px;
+	}
+	.tz-cta5-img-wrap {
+		margin-top: 30px;
+		&:before {
+			display: none;
+		}
+	}
+	.tz-faq-accordion .accordion-item {
+		background-color: #F2F3F4;
+	}
+}

@@ -2,6 +2,9 @@
 	z-index: 1;
 	overflow: hidden;
 	background-color: var(--tz-prime-c);
+	&:is(.ver_2) {
+		background-color: #fff;
+	}
 	.tz-section-title {
 		.subtitle {
 			color: #fff;
@@ -109,6 +112,64 @@
 				background-color: var(--tz-prime-c);
 				&:hover {
 					background-color: var(--tz-title-color);
+				}
+			}
+		}
+	}
+}
+.tz-price-growth-sec {
+	background-color: #F6F6F6;
+	.tz-section-title {
+		margin: 0 auto;
+		max-width: 635px;
+	}
+}
+.tz-price-growth-item {
+	overflow: hidden;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	transition: all 500ms ease-in-out;
+	box-shadow: 0px 15px 48px 0px #10131817;
+	.item-icon {
+		width: 100px;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #DBE1EB;
+		border-top-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		transition: all 500ms ease-in-out;
+		svg {
+			path {
+				fill: var(--tz-prime-c);
+				transition: all 500ms ease-in-out;
+			}
+		}
+	}
+	.item-text {
+		padding-top: 40px;
+		padding-left: 45px;
+		padding-bottom: 45px;
+		h3 {
+			font-size: 48px;
+			font-weight: 700;
+		}
+		p {
+			font-weight: 700;
+			color: var(--tz-title-color);
+		}
+	}
+	&:hover {
+		border: 1px solid var(--tz-prime-c);
+		.item-icon {
+			border: 1px solid var(--tz-prime-c);
+			background-color: var(--tz-prime-c);
+			svg {
+				path {
+					fill: #fff;
 				}
 			}
 		}

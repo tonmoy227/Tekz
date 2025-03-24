@@ -4,6 +4,9 @@
 		margin: 0 auto;
 		max-width: 570px;
 	}
+	&:is(.ver_2) {
+		background-color: #F2F3F4;
+	}
 }
 .tz-wrkp-item {
 	margin-bottom: 30px;
@@ -42,6 +45,22 @@
 	&:hover {
 		.item-icon {
 			animation: swing 2s ease infinite;
+		}
+	}
+	&:is(.ver_2) {
+		z-index: 1;
+		padding: 30px;
+		position: relative;
+		&:before {
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			width: 100%;
+			height: 70%;
+			content: '';
+			border-radius: 15px;
+			position: absolute;
+			background-color: #fff;
 		}
 	}
 }

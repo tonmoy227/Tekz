@@ -35,6 +35,24 @@
 	max-width: 566px;
 	border-radius: 15px;
 	background-color: #fff;
+	&:is(.ver_2) {
+		margin-bottom: 40px;
+		.item-text {
+			.read_more {
+				padding: 12px 30px;
+				border-radius: 100px;
+				color: var(--tz-prime-c);
+				background-color: #F0EFFF;
+				&:before {
+					display: none;
+				}
+				&:hover {
+					color: #fff;
+					background-color: var(--tz-prime-c);
+				}
+			}
+		}
+	}
 	.item-img {
 		height: 250px;
 		overflow: hidden;

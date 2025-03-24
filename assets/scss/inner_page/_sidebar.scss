@@ -1,0 +1,87 @@
+.tz-ser-sidebar {
+	padding: 20px;
+	border-radius: 15px;
+	background-color: #F2F3F4;
+}
+.tz-sidebar-widget {
+	padding: 30px 35px;
+	border-radius: 15px;
+	margin-bottom: 30px;
+	background-color: #fff;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.widget-title {
+		font-size: 20px;
+		font-weight: 700;
+		padding-bottom: 20px;
+	}
+	.download-item {
+		a {
+			gap: 15px;
+			margin-bottom: 25px;
+			padding-bottom: 25px;
+			border-bottom: 1px solid #EDEDED;
+		}
+		&:last-child {
+			a {
+				border: none;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+		.item-icon {
+			color: #fff;
+			width: 45px;
+			height: 45px;
+			border-radius: 100%;
+			background-color: var(--tz-prime-c);
+		}
+		.item-text {
+			h4 {
+				font-size: 18px;
+				font-weight: 700;
+				padding-bottom: 2px;
+			}
+		}
+	}
+	.category-widget {
+		li {
+			a {
+				display: flex;
+				padding: 15px 0;
+				font-weight: 500;
+				align-items: center;
+				justify-content: space-between;
+				border-bottom: 1px solid #DEE1E9;
+			}
+			&:last-child {
+				a {
+					border: none;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+	.cta-widget {
+		padding: 20px 0px;
+		.inner-text {
+			margin: 0 auto;
+			max-width: 240px;
+		}
+		h4 {
+			color: #fff;
+			font-size: 20px;
+			font-weight: 700;
+			padding: 30px 0px;
+		}
+		.tz-btn-1 {
+			a {
+				&:hover {
+					color: var(--tz-prime-c);
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
