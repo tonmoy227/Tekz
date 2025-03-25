@@ -34,3 +34,12 @@
 		background-color: #F2F3F4;
 	}
 }
+.gallery-row-1,
+.gallery-row-2{
+	gap: 20px;
+	margin-bottom: 20px;
+	@media #{$xs} {
+		gap: 5px;
+		margin-bottom: 5px;
+	}
+}

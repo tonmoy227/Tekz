@@ -58,6 +58,35 @@
 			}
 		}
 	}
+	&:is(.list-view-item) {
+		padding: 20px;
+		max-width: 850px;
+		.item-img { 
+			margin-bottom: 20px;
+			border-radius: 15px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			@media #{$xxs} {
+				height: 260px;
+			}
+		}
+		.item-text {
+			padding: 10px;
+			.item-meta {
+				margin-bottom: 16px;
+			}
+			.blog_title {
+				font-size: 24px;
+				padding-bottom: 16px;
+			}
+			p {
+				padding-bottom: 20px;
+			}
+		}
+	}
 	&:hover {
 		.item-text {
 			.read_more {

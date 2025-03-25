@@ -71,4 +71,12 @@
 			background-color: var(--tz-title-color);
 		}
 	}
+	&:is(.ver_2) {
+		background-color: #F2F3F4;
+		h3 {
+			font-size: 28px;
+			font-weight: 700;
+			padding-bottom: 20px;
+		}
+	}
 }
